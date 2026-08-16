@@ -93,6 +93,19 @@ export default function AskAi() {
         answer += decoder.decode(value, { stream: true });
         setTurns([...next, { role: 'assistant', content: answer }]);
       }
+
+      // A stream can end with nothing in it. The usual cause is the free tier's
+      // quota running out, which the provider reports after the response has
+      // already started — too late for a status code. Say something useful
+      // rather than leaving an empty bubble on screen.
+      if (!answer.trim()) {
+        setTurns([...next, {
+          role: 'assistant',
+          content:
+            'I could not get to that one — the assistant is busy right now. '
+            + 'Message us on WhatsApp and the desk will pick it up straight away.',
+        }]);
+      }
     } catch (error) {
       if ((error as Error)?.name === 'AbortError') return;
       setTurns([...next, {
@@ -167,7 +180,7 @@ export default function AskAi() {
             value={draft}
             onChange={(e) => setDraft(e.target.value)}
             placeholder="Ask about a vehicle or a rate…"
-            maxLength={1000}
+            maxLength={600}
             disabled={busy}
             aria-label="Your question"
           />
