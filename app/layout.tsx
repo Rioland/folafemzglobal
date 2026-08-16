@@ -1,6 +1,12 @@
 import { SITE_URL } from '@/lib/site';
 
 import type { Metadata } from 'next';
+
+// Animate.css first, globals.css second: the reduced-motion block at the end of
+// globals.css uses !important, so importing it last lets it win over the
+// library's own. v4 namespaces every class as animate__*, so nothing here
+// collides with the hand-written motion system.
+import 'animate.css';
 import './globals.css';
 import { settings } from '@/lib/content';
 import { BookingProvider } from '@/components/BookingModal';
