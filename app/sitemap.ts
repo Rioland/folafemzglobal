@@ -1,7 +1,9 @@
 import type { MetadataRoute } from 'next';
 import { cities, landingServices, locationServicePairs, pages, posts } from '@/lib/content';
 
-const BASE = 'https://ghostwhite-mink-815498.hostingersite.com';
+import { SITE_URL } from '@/lib/site';
+
+const BASE = SITE_URL;
 
 export const dynamic = 'force-static';
 

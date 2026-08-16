@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cities, landingServices, pages, settings } from '@/lib/content';
-import { whatsappDirect } from '@/lib/enquiry';
+import { allPhones, telHref, whatsappDirect } from '@/lib/enquiry';
 import { BookButton } from './BookingModal';
 
 /* --------------------------------------------------------------------------
@@ -209,7 +209,9 @@ export function Footer() {
 
           <div>
             <h4>Contact</h4>
-            <a href={`tel:${settings.phone.replace(/[^\d+]/g, '')}`}>{settings.phone}</a>
+            {allPhones.map((n) => (
+              <a key={n} href={telHref(n)}>{n}</a>
+            ))}
             <a href={`mailto:${settings.email}`}>{settings.email}</a>
             <p className="footer__blurb">{settings.addressPrimary}</p>
             <p className="footer__blurb">{settings.addressSecondary}</p>

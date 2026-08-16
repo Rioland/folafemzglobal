@@ -30,6 +30,10 @@ export default function BookingForm({ vehicle, service, source, compact }: Props
   });
 
   const [touched, setTouched] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+  const [error, setError] = useState('');
+  // Honeypot: hidden from people, irresistible to bots.
+  const [website, setWebsite] = useState('');
 
   const enquiry = useMemo<Enquiry>(() => ({ ...form, source }), [form, source]);
 
@@ -40,20 +44,86 @@ export default function BookingForm({ vehicle, service, source, compact }: Props
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => setForm((f) => ({ ...f, [key]: e.target.value }));
 
-  // Anchors, not form submits: each opens the visitor's own app with the
-  // message already written. Guarded so an incomplete enquiry cannot be sent.
-  const send = (href: string) => (e: React.MouseEvent) => {
+  // WhatsApp stays an anchor: it opens the visitor's own app with the message
+  // already written, which is the fastest route to a reply.
+  const send = (_href: string) => (e: React.MouseEvent) => {
     if (!valid) {
       e.preventDefault();
       setTouched(true);
     }
   };
 
+  // Email goes through the server so the enquiry lands in the business inbox
+  // whether or not the visitor has a mail client configured.
+  async function submit(e: React.FormEvent) {
+    e.preventDefault();
+
+    if (!valid) {
+      setTouched(true);
+      return;
+    }
+
+    setStatus('sending');
+    setError('');
+
+    try {
+      // Trailing slash matters: next.config sets trailingSlash, so '/api/enquiry'
+      // answers with a 308 to '/api/enquiry/' and the POST makes a needless
+      // second round trip.
+      const res = await fetch('/api/enquiry/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...enquiry, website }),
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        setError(data.error ?? 'Something went wrong. Please try WhatsApp.');
+        setStatus('error');
+        return;
+      }
+
+      setStatus('sent');
+    } catch {
+      setError('No connection. Please try WhatsApp instead.');
+      setStatus('error');
+    }
+  }
+
+  if (status === 'sent') {
+    return (
+      <div className="bookingForm bookingForm--done" role="status">
+        <div className="bookingForm__tick" aria-hidden="true">✓</div>
+        <h3>Enquiry sent</h3>
+        <p>
+          Thank you {form.name?.split(' ')[0]}. We have your request and will call you on{' '}
+          <strong>{form.phone}</strong>, usually within the hour.
+        </p>
+        <a
+          className="btn btn--amber btn--block"
+          href={whatsappHref(enquiry)}
+          target="_blank"
+          rel="noopener"
+        >
+          Message us on WhatsApp too
+        </a>
+        <button
+          type="button"
+          className="btn btn--ghost btn--block"
+          onClick={() => { setStatus('idle'); setTouched(false); }}
+        >
+          Send another enquiry
+        </button>
+      </div>
+    );
+  }
+
   const err = (key: keyof Enquiry) =>
     touched && REQUIRED.includes(key) && !String(form[key] ?? '').trim();
 
   return (
-    <div className="bookingForm">
+    <form className="bookingForm" onSubmit={submit} noValidate>
       <div className={compact ? 'field' : 'field field--row'}>
         <div>
           <label htmlFor="bf-name">Your name *</label>
@@ -162,6 +232,18 @@ export default function BookingForm({ vehicle, service, source, compact }: Props
         </div>
       )}
 
+      {/* Hidden from people; bots fill every field they find. */}
+      <div className="honeypot" aria-hidden="true">
+        <label htmlFor="bf-website">Leave this empty</label>
+        <input
+          id="bf-website"
+          tabIndex={-1}
+          autoComplete="off"
+          value={website}
+          onChange={(e) => setWebsite(e.target.value)}
+        />
+      </div>
+
       <div className="bookingForm__actions">
         <a
           className="btn btn--amber btn--block"
@@ -173,19 +255,18 @@ export default function BookingForm({ vehicle, service, source, compact }: Props
         >
           Send on WhatsApp
         </a>
-        <a
+        <button
+          type="submit"
           className="btn btn--ghost btn--block"
-          href={mailtoHref(enquiry)}
-          onClick={send(mailtoHref(enquiry))}
-          aria-disabled={!valid}
+          disabled={status === 'sending'}
         >
-          Send by email
-        </a>
+          {status === 'sending' ? 'Sending…' : 'Send by email'}
+        </button>
       </div>
 
       <p className="bookingForm__note">
-        Opens WhatsApp or your mail app with the details already filled in.
-        Nothing is sent until you press send there.
+        WhatsApp opens with the details already written — fastest for a same-day
+        reply. Email sends straight to our desk from here.
       </p>
 
       {touched && !valid && (
@@ -194,10 +275,17 @@ export default function BookingForm({ vehicle, service, source, compact }: Props
         </p>
       )}
 
+      {status === 'error' && (
+        <p className="fieldError" role="alert">
+          {error}{' '}
+          <a href={mailtoHref(enquiry)}>Open in your own mail app instead.</a>
+        </p>
+      )}
+
       <details className="bookingForm__preview">
         <summary>Preview the message</summary>
         <pre>{composeMessage(enquiry)}</pre>
       </details>
-    </div>
+    </form>
   );
 }

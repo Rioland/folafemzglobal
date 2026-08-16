@@ -5,7 +5,7 @@ import {
   directoryServices, getCity, headline, locationServicePairs,
   resolveLocationService, settings, vehicles,
 } from '@/lib/content';
-import { whatsappDirect } from '@/lib/enquiry';
+import { telHref, whatsappDirect } from '@/lib/enquiry';
 import BookingForm from '@/components/BookingForm';
 import { VehicleCard } from '@/components/FleetGrid';
 
@@ -72,7 +72,7 @@ export default async function LocationServicePage({ params }: Props) {
             )} target="_blank" rel="noopener">
               Get a price on WhatsApp
             </a>
-            <a className="btn btn--onDark" href={`tel:${settings.phone.replace(/[^\d+]/g, '')}`}>
+            <a className="btn btn--onDark" href={telHref(settings.phone)}>
               Call {settings.phone}
             </a>
           </div>

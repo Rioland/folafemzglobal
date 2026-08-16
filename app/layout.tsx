@@ -1,3 +1,5 @@
+import { SITE_URL } from '@/lib/site';
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { settings } from '@/lib/content';
@@ -5,7 +7,7 @@ import { BookingProvider } from '@/components/BookingModal';
 import { Footer, FloatingActions, Header, RevealOnScroll } from '@/components/SiteChrome';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ghostwhite-mink-815498.hostingersite.com'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: settings.metaTitle || settings.siteName,
     template: `%s | ${settings.siteName}`,
@@ -33,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     description: settings.metaDescription,
     telephone: settings.phone,
     email: settings.email,
-    url: 'https://ghostwhite-mink-815498.hostingersite.com',
+    url: SITE_URL,
     address: [settings.addressPrimary, settings.addressSecondary]
       .filter(Boolean)
       .map((a) => ({ '@type': 'PostalAddress', streetAddress: a, addressCountry: 'NG' })),

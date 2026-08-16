@@ -89,5 +89,22 @@ export function whatsappDirect(text?: string): string {
   return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 }
 
-export const telHref = `tel:${settings.phone.replace(/[^\d+]/g, '')}`;
+/**
+ * Nigerian numbers are written locally as 0703…, which only dials from inside
+ * Nigeria. Convert the leading 0 to +234 so the link works for anyone abroad,
+ * while the number stays in its familiar local form on screen.
+ */
+export function telHref(number: string): string {
+  const digits = number.replace(/[^\d+]/g, '');
+  if (digits.startsWith('+')) return `tel:${digits}`;
+  if (digits.startsWith('0')) return `tel:+234${digits.slice(1)}`;
+  if (digits.startsWith('234')) return `tel:+${digits}`;
+  return `tel:${digits}`;
+}
+
+/** Main number first, then any alternates, de-duplicated. */
+export const allPhones = [settings.phone, ...settings.phoneAlt].filter(
+  (n, i, arr) => n && arr.indexOf(n) === i
+);
+
 export const emailHref = `mailto:${settings.email}`;

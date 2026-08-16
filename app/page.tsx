@@ -2,7 +2,7 @@ import Link from 'next/link';
 import {
   cities, faqs, landingServices, posts, settings, testimonials, vehicles,
 } from '@/lib/content';
-import { whatsappDirect } from '@/lib/enquiry';
+import { allPhones, telHref, whatsappDirect } from '@/lib/enquiry';
 import BookingForm from '@/components/BookingForm';
 import FleetGrid from '@/components/FleetGrid';
 import FaqList from '@/components/Faq';
@@ -279,12 +279,14 @@ export default function HomePage() {
               </p>
 
               <div className="contactList">
-                <a href={`tel:${settings.phone.replace(/[^\d+]/g, '')}`}>
-                  <span className="plate plate--dark">
-                    <span className="plate__tab">CALL</span>
-                    <span className="plate__value">{settings.phone}</span>
-                  </span>
-                </a>
+                {allPhones.map((number, i) => (
+                  <a key={number} href={telHref(number)}>
+                    <span className="plate plate--dark">
+                      <span className="plate__tab">{i === 0 ? 'CALL' : 'ALSO'}</span>
+                      <span className="plate__value">{number}</span>
+                    </span>
+                  </a>
+                ))}
                 <a href={`mailto:${settings.email}`}>
                   <span className="plate plate--dark">
                     <span className="plate__tab">MAIL</span>

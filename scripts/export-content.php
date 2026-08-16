@@ -3,19 +3,8 @@
  * Export the seeded Laravel content into a single JSON file for the Next.js
  * front-end. Reads the SQLite dev database directly so the static site carries
  * exactly the content the Laravel site serves — same copy, same rates, same slugs.
- *
- * This repo is standalone, so the Laravel checkout is found next to it by default.
- * Override with LARAVEL_PATH=/path/to/laravel php scripts/export-content.php
  */
-$laravel = getenv('LARAVEL_PATH') ?: dirname(__DIR__, 2) . '/naija-car-hire';
-
-if (!is_file($laravel . '/database/database.sqlite')) {
-    fwrite(STDERR, "No Laravel database at {$laravel}/database/database.sqlite\n");
-    fwrite(STDERR, "Set LARAVEL_PATH to the Laravel checkout and re-run.\n");
-    exit(1);
-}
-
-$db = new PDO('sqlite:' . $laravel . '/database/database.sqlite');
+$db = new PDO('sqlite:' . dirname(__DIR__, 2) . '/database/database.sqlite');
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $all = fn(string $sql) => $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
@@ -130,6 +119,7 @@ $out = [
         'tagline' => $settings['tagline'] ?? '',
         'logo' => $img($settings['logo'] ?? null),
         'phone' => $settings['phone'] ?? '',
+        'phoneAlt' => array_values(array_filter(array_map('trim', explode("\n", (string) ($settings['phone_alt'] ?? ''))))),
         'whatsapp' => preg_replace('/\D+/', '', $settings['whatsapp_number'] ?? ''),
         'email' => $settings['email'] ?? '',
         'addressPrimary' => $settings['address_primary'] ?? '',
@@ -178,7 +168,7 @@ foreach (['vehicles','cities','locations','services','posts','faqs','pages','tes
 printf("  landing pages  %d\n", count($locationsOut) * count(array_filter($services, fn($s) => $s['showInDirectory'])));
 
 // Keep public/images in step with the Laravel seed media.
-$mediaDir = $laravel . '/database/seeders/media';
+$mediaDir = dirname(__DIR__, 2) . '/database/seeders/media';
 $imageDir = dirname(__DIR__) . '/public/images';
 @mkdir($imageDir, 0775, true);
 $copied = 0;

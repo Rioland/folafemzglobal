@@ -85,7 +85,7 @@ export type Testimonial = {
 
 export type Settings = {
   siteName: string; tagline: string; logo: string | null;
-  phone: string; whatsapp: string; email: string;
+  phone: string; phoneAlt: string[]; whatsapp: string; email: string;
   addressPrimary: string; addressSecondary: string; businessHours: string;
   heroEyebrow: string; heroHeading: string; heroSubheading: string; heroImage: string | null;
   fleetNote: string; aboutHeading: string; aboutBody: string; trustPoints: string[];

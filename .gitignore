@@ -1,6 +1,27 @@
+# dependencies
 node_modules/
+
+# build output
 .next/
 out/
-next-env.d.ts
-.DS_Store
 *.tsbuildinfo
+next-env.d.ts
+
+# environment — never commit real tokens or mailbox passwords.
+# .env.example is the documented template and is intentionally tracked.
+.env
+.env.*
+!.env.example
+
+# vercel
+.vercel/
+
+# os
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

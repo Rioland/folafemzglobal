@@ -3,9 +3,13 @@
         "siteName": "Folafemz Global NIG LTD",
         "tagline": "Chauffeur-driven cars, buses and logistics across Nigeria",
         "logo": "/images/brand-mark.jpg",
-        "phone": "+234 814 991 6721",
-        "whatsapp": "2348149916721",
-        "email": "riotech2222@gmail.com",
+        "phone": "0703 375 8671",
+        "phoneAlt": [
+            "0806 666 4484",
+            "0905 000 0044"
+        ],
+        "whatsapp": "2347033758671",
+        "email": "suport@folafemzglobal.com",
         "addressPrimary": "Lagos — Victoria Island",
         "addressSecondary": "Abuja — Wuse II",
         "businessHours": "Dispatch desk open 24 hours, every day",

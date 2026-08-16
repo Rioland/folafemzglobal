@@ -4,7 +4,7 @@ A public-facing rebuild of the Laravel site as a **static export**: 319 prerende
 HTML pages, no server, no database, no dashboard. Every enquiry opens the visitor's
 own WhatsApp or mail client with the message already written.
 
-The Laravel application (`Rioland/carhire`) is untouched and still runs
+The Laravel application in the parent directory is untouched and still runs
 independently. This is an alternative front-end, not a replacement.
 
 ```bash
@@ -52,15 +52,8 @@ php scripts/export-content.php   # rewrites data/content.json, syncs public/imag
 npm run build
 ```
 
-The script reads the Laravel SQLite database from a checkout sitting next to this
-one (`../naija-car-hire`). If yours lives elsewhere, point it there:
-
-```bash
-LARAVEL_PATH=/path/to/laravel php scripts/export-content.php
-```
-
-To pull from **production** MySQL instead, change the PDO line at the top of the
-script to your live credentials.
+The script reads `../database/database.sqlite`. To pull from **production** MySQL
+instead, change the PDO line at the top of the script to your live credentials.
 
 > Because content is baked in at build time, a dashboard edit does **not** appear on
 > this site until you re-export and redeploy. That is the trade for having no
@@ -105,7 +98,7 @@ this on a subdomain.
 
 ### Vercel / Netlify
 
-Point it at this repository root. Both detect Next.js automatically. Remove
+Point it at the `nextjs` directory. Both detect Next.js automatically. Remove
 `output: 'export'` first if you want to add serverless routes for form capture.
 
 ---
