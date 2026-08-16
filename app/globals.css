@@ -457,7 +457,14 @@ textarea { min-height: 110px; resize: vertical; }
 .footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; }
 .footer a { color: #96a0b3; text-decoration: none; font-size: .9375rem; }
 .footer a:hover { color: var(--white); }
-.footer__bottom { border-top: 1px solid var(--line-dark); padding-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; font-size: .8125rem; }
+
+/* Columns stack their own children — the links are bare anchors, not a <ul>. */
+.footer__grid > div { display: grid; gap: .5rem; align-content: start; justify-items: start; }
+.footer__grid > div > h4, .footer__grid > div > .brand--footer { margin-bottom: .5rem; }
+.footer__blurb { margin: 0; font-size: .9375rem; line-height: 1.6; max-width: 34ch; }
+
+.footer__bottom, .footer__bar { border-top: 1px solid var(--line-dark); padding-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; font-size: .8125rem; }
+.footer__links { display: flex; flex-wrap: wrap; gap: 1rem; }
 .social { display: flex; gap: .5rem; margin-top: 1rem; }
 .social a { width: 36px; height: 36px; border: 1px solid var(--line-dark); border-radius: var(--radius); display: grid; place-items: center; font-family: "Roboto Mono", monospace; font-size: .75rem; }
 .social a:hover { background: var(--green); border-color: var(--green); color: var(--white); }
