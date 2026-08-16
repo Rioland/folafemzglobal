@@ -31,7 +31,7 @@ export default function DirectoryPage() {
         return (
           <section className="section section--edge" key={city.slug}>
             <div className="shell">
-              <div className="sectionHead">
+              <div className="sectionHead reveal">
                 <div>
                   <div className="eyebrow">{city.state}</div>
                   <h2>{city.name}</h2>
@@ -42,7 +42,7 @@ export default function DirectoryPage() {
                 </Link>
               </div>
 
-              <div className="directoryGrid">
+              <div className="directoryGrid stagger">
                 {areas.map((area) => (
                   <div className="directoryCol" key={area.slug}>
                     <h3>{area.name}</h3>

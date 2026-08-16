@@ -139,7 +139,7 @@ function CityPage({ citySlug }: { citySlug: string }) {
               </div>
             </div>
 
-            <aside className="sticky">
+            <aside className="sticky reveal reveal--right">
               <div className="dispatch">
                 <div className="dispatch__head">
                   <h2>Book in {city.name}</h2>
@@ -154,13 +154,13 @@ function CityPage({ citySlug }: { citySlug: string }) {
 
       <section className="section section--edge">
         <div className="shell">
-          <div className="sectionHead">
+          <div className="sectionHead reveal">
             <div>
               <div className="eyebrow">Fleet</div>
               <h2>Popular vehicles in {city.name}</h2>
             </div>
           </div>
-          <div className="grid grid--3">
+          <div className="grid grid--3 stagger">
             {priced.map((v) => <VehicleCard key={v.slug} vehicle={v} source={source} />)}
           </div>
         </div>
@@ -171,7 +171,7 @@ function CityPage({ citySlug }: { citySlug: string }) {
           <div className="shell">
             <div className="eyebrow">Areas we deliver to</div>
             <h2>{city.name} coverage</h2>
-            <div className="chipRow">
+            <div className="chipRow" data-animate="fadeInUp">
               {areas.map((a) => (
                 <Link className="chip" key={a.slug} href={`/locations/${directoryServices[0].slug}-${a.slug}/`}>
                   {a.name}

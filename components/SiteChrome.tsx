@@ -264,16 +264,49 @@ export function FloatingActions() {
 }
 
 /**
- * Adds .is-visible to .reveal / .stagger elements as they enter the viewport,
- * which is what drives the entrance animations in globals.css. Re-runs on route
- * change so client-navigated pages animate too.
+ * Drives every scroll entrance on the site. Re-runs on route change so
+ * client-navigated pages animate too.
+ *
+ * Two vocabularies, both handled here:
+ *
+ *   .reveal / .stagger      the hand-written system in globals.css — gets
+ *                           .is-visible and transitions to its resting state.
+ *   data-animate="fadeInUp" any Animate.css animation, applied at the moment
+ *                           the element enters the viewport.
+ *
+ * The second exists because Animate.css runs on page load, not on scroll: a
+ * class written straight into the markup plays through while the element is
+ * still below the fold and is over before anyone sees it. Applying it here is
+ * what makes the library usable outside the first screen.
+ *
+ * `data-animate-delay="200"` adds a delay in milliseconds.
  */
+function play(el: Element) {
+  const name = el.getAttribute('data-animate');
+
+  if (!name) {
+    el.classList.add('is-visible');
+    return;
+  }
+
+  const delay = el.getAttribute('data-animate-delay');
+  if (delay) (el as HTMLElement).style.animationDelay = `${delay}ms`;
+
+  el.classList.add('animate__animated', `animate__${name}`);
+}
+
 export function RevealOnScroll() {
   useEffect(() => {
-    const targets = Array.from(document.querySelectorAll('.reveal, .stagger'));
+    const targets = Array.from(
+      document.querySelectorAll('.reveal, .stagger, [data-animate]')
+    );
 
-    if (!('IntersectionObserver' in window)) {
-      targets.forEach((el) => el.classList.add('is-visible'));
+    // No observer, or the visitor asked for less motion: show everything at
+    // once rather than leaving it stuck at opacity 0.
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (reduced || !('IntersectionObserver' in window)) {
+      targets.forEach((el) => el.classList.add('is-visible', 'animate__animated'));
       return;
     }
 
@@ -281,7 +314,7 @@ export function RevealOnScroll() {
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          entry.target.classList.add('is-visible');
+          play(entry.target);
           observer.unobserve(entry.target);
         });
       },

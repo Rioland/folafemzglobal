@@ -77,7 +77,7 @@ export default async function ArticlePage({ params }: Props) {
       <section className="section section--edge">
         <div className="shell">
           <h2>More guides</h2>
-          <div className="grid grid--3">
+          <div className="grid grid--3 stagger">
             {others.map((p) => (
               <Link className="postCard" key={p.slug} href={`/articles/${p.slug}/`}>
                 {p.coverImage && (

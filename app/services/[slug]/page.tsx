@@ -54,7 +54,7 @@ export default async function ServicePage({ params }: Props) {
       <section className="section">
         <div className="shell">
           <div className="split">
-            <div>
+            <div className="reveal reveal--left">
               {service.image && (
                 <img className="aboutImage" src={service.image} alt="" loading="lazy" />
               )}
@@ -63,7 +63,7 @@ export default async function ServicePage({ params }: Props) {
               )}
             </div>
 
-            <aside className="sticky">
+            <aside className="sticky reveal reveal--right">
               <div className="dispatch">
                 <div className="dispatch__head">
                   <h2>Request {service.name}</h2>
@@ -79,7 +79,7 @@ export default async function ServicePage({ params }: Props) {
       <section className="section section--dark section--tight">
         <div className="shell">
           <div className="eyebrow">{service.name} by area</div>
-          <div className="chipRow">
+          <div className="chipRow" data-animate="fadeInUp">
             {locations.map((l) => (
               <Link className="chip" key={l.slug} href={`/locations/${service.slug}-${l.slug}/`}>
                 {l.name}

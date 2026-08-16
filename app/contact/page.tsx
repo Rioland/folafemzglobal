@@ -23,7 +23,7 @@ export default function ContactPage() {
       <section className="section">
         <div className="shell">
           <div className="split">
-            <div>
+            <div className="reveal reveal--left">
               <h2>Direct lines</h2>
               <div className="contactList contactList--light">
                 {allPhones.map((number, i) => (
@@ -53,7 +53,7 @@ export default function ContactPage() {
               <p className="lead">{settings.addressSecondary}</p>
             </div>
 
-            <div className="dispatch">
+            <div className="dispatch reveal reveal--right">
               <div className="dispatch__head">
                 <h2>Send an enquiry</h2>
                 <span>WhatsApp or email</span>

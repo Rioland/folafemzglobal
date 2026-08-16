@@ -89,12 +89,12 @@ export default async function LocationServicePage({ params }: Props) {
               )}
 
               <h2>Vehicles we send to {location.name}</h2>
-              <div className="grid grid--3">
+              <div className="grid grid--3 stagger">
                 {suggested.map((v) => <VehicleCard key={v.slug} vehicle={v} source={source} />)}
               </div>
             </div>
 
-            <aside className="sticky">
+            <aside className="sticky reveal reveal--right">
               <div className="dispatch">
                 <div className="dispatch__head">
                   <h2>Request this service</h2>
@@ -114,7 +114,7 @@ export default async function LocationServicePage({ params }: Props) {
       <section className="section section--dark section--tight">
         <div className="shell">
           <div className="eyebrow">Also in {location.name}</div>
-          <div className="chipRow">
+          <div className="chipRow" data-animate="fadeInUp">
             {related.map((s) => (
               <Link className="chip" key={s.slug} href={`/locations/${s.slug}-${location.slug}/`}>
                 {s.name}
