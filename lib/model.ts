@@ -32,13 +32,9 @@ type Provider = {
   build: (apiKey: string, modelId: string) => LanguageModel;
 };
 
+/* Order matters: the first provider with a key wins. Google is first because
+   it is the one verified to work on a free account. */
 const PROVIDERS: Provider[] = [
-  {
-    name: 'cerebras',
-    envKey: 'CEREBRAS_API_KEY',
-    defaultModel: 'llama-3.3-70b',
-    build: (apiKey, modelId) => createCerebras({ apiKey })(modelId),
-  },
   {
     /*
      * gemini-2.5-flash-lite still appears in the models list but is closed to
@@ -52,6 +48,27 @@ const PROVIDERS: Provider[] = [
     envKey: 'GOOGLE_GENERATIVE_AI_API_KEY',
     defaultModel: 'gemini-3.5-flash-lite',
     build: (apiKey, modelId) => createGoogle({ apiKey })(modelId),
+  },
+  {
+    /*
+     * Second because a Cerebras account does not necessarily come with free
+     * inference. Ours listed three models (zai-glm-4.7, gpt-oss-120b,
+     * gemma-4-31b) and every one returned "Payment required" — the models
+     * endpoint advertises the catalogue, not your entitlement. The published
+     * 1M-tokens/day free tier evidently is not granted to every signup.
+     *
+     * Only reachable now by setting AI_PROVIDER=cerebras. Before you do, check
+     * that a model actually answers rather than trusting the list:
+     *   curl -H "Authorization: Bearer $CEREBRAS_API_KEY" \
+     *     -H 'Content-Type: application/json' \
+     *     -d '{"model":"gpt-oss-120b","max_tokens":5,
+     *          "messages":[{"role":"user","content":"hi"}]}' \
+     *     https://api.cerebras.ai/v1/chat/completions
+     */
+    name: 'cerebras',
+    envKey: 'CEREBRAS_API_KEY',
+    defaultModel: 'gpt-oss-120b',
+    build: (apiKey, modelId) => createCerebras({ apiKey })(modelId),
   },
 ];
 
