@@ -40,9 +40,17 @@ const PROVIDERS: Provider[] = [
     build: (apiKey, modelId) => createCerebras({ apiKey })(modelId),
   },
   {
+    /*
+     * gemini-2.5-flash-lite still appears in the models list but is closed to
+     * new API keys ("no longer available to new users"), which fails at the
+     * first question rather than at startup. 3.5-flash-lite is the current
+     * one that works; the gemini-flash-lite-latest alias 404s, so there is no
+     * self-updating option to hide behind. Expect to bump this eventually —
+     * AI_MODEL overrides it without a deploy.
+     */
     name: 'google',
     envKey: 'GOOGLE_GENERATIVE_AI_API_KEY',
-    defaultModel: 'gemini-2.5-flash-lite',
+    defaultModel: 'gemini-3.5-flash-lite',
     build: (apiKey, modelId) => createGoogle({ apiKey })(modelId),
   },
 ];
