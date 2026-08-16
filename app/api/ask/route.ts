@@ -1,30 +1,25 @@
-import { createGroq } from '@ai-sdk/groq';
 import { streamText } from 'ai';
 import { NextResponse } from 'next/server';
 import { systemPrompt } from '@/lib/assistant';
+import { resolveModel } from '@/lib/model';
 
 /* --------------------------------------------------------------------------
    Ask-me AI endpoint
    --------------------------------------------------------------------------
-   Groq's free tier, through the Vercel AI SDK. Free means free — no card on
-   file — so this costs the business nothing to run. The trade is quota: the
-   free tier is metered per minute and per day, and when it runs out the
-   assistant goes quiet rather than billing anyone.
+   A free-tier model, through the Vercel AI SDK. Free means free — no card on
+   file — so this costs the business nothing to run. The trade is quota: free
+   tiers are metered, and when one runs out the assistant goes quiet rather
+   than billing anyone.
 
    Everything below that looks like penny-pinching is protecting that quota:
    the short history window, the small output cap, the per-IP throttle. The
    knowledge base itself is only ~1,300 tokens, so the history is what grows.
 
-   The SDK is provider-agnostic on purpose. Swapping Groq for OpenRouter,
-   Gemini or anything else later is a change to these three lines, not a
-   rewrite — see the model note in .env.example.
+   Which provider answers is lib/model.ts's problem, not this file's.
    -------------------------------------------------------------------------- */
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
-
-/** Free-tier default. Override with GROQ_MODEL if limits or quality bite. */
-const DEFAULT_MODEL = 'llama-3.3-70b-versatile';
 
 const MAX_MESSAGE_CHARS = 600;
 
@@ -90,10 +85,10 @@ function clean(raw: unknown): Turn[] {
 }
 
 export async function POST(request: Request) {
-  const apiKey = process.env.GROQ_API_KEY;
+  const resolved = resolveModel();
 
-  if (!apiKey) {
-    console.error('[ask] GROQ_API_KEY is not set');
+  if (!resolved.ok) {
+    console.error('[ask] no AI provider key is set — see .env.example');
     return NextResponse.json(
       { error: 'The assistant is not switched on yet. Please message us on WhatsApp.' },
       { status: 503 }
@@ -120,10 +115,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Ask a question first.' }, { status: 422 });
   }
 
-  const groq = createGroq({ apiKey });
-
   const result = streamText({
-    model: groq(process.env.GROQ_MODEL || DEFAULT_MODEL),
+    model: resolved.model,
     system: systemPrompt(),
     messages,
     // Short answers keep the widget readable and the daily quota alive.
@@ -138,7 +131,7 @@ export async function POST(request: Request) {
      * client treats as "empty answer" and answers with the WhatsApp fallback.
      */
     onError({ error }) {
-      console.error('[ask] generation failed:', error);
+      console.error(`[ask] ${resolved.provider}/${resolved.modelId} failed:`, error);
     },
   });
 
