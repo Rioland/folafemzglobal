@@ -130,6 +130,8 @@ export default function BookingForm({ vehicle, service, source, compact }: Props
           <input
             id="bf-name"
             className="input"
+            type="text"
+            autoComplete="name"
             value={form.name}
             onChange={set('name')}
             placeholder="e.g. Adebayo Johnson"
@@ -145,6 +147,7 @@ export default function BookingForm({ vehicle, service, source, compact }: Props
             className="input"
             type="tel"
             inputMode="tel"
+            autoComplete="tel"
             value={form.phone}
             onChange={set('phone')}
             placeholder="e.g. 0803 000 0000"
@@ -161,6 +164,7 @@ export default function BookingForm({ vehicle, service, source, compact }: Props
           id="bf-email"
           className="input"
           type="email"
+          autoComplete="email"
           value={form.email}
           onChange={set('email')}
           placeholder="you@example.com"
@@ -212,6 +216,7 @@ export default function BookingForm({ vehicle, service, source, compact }: Props
         <input
           id="bf-pickup"
           className="input"
+          type="text"
           value={form.pickupLocation}
           onChange={set('pickupLocation')}
           placeholder="Area, city or airport terminal"

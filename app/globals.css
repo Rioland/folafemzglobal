@@ -305,8 +305,18 @@ p { margin: 0 0 1em; }
   font-weight: 500;
 }
 
+/*
+ * Matched by class as well as by type.
+ *
+ * `input[type="text"]` only matches a literal type attribute — an <input> with
+ * no type renders as text but matches none of these selectors, so it used to
+ * come out completely unstyled. The .input/.select/.textarea classes are
+ * already on every field, so keying off those makes the type attribute
+ * optional rather than load-bearing.
+ */
 input[type="text"], input[type="tel"], input[type="email"], input[type="date"],
-input[type="number"], input[type="password"], input[type="search"], select, textarea {
+input[type="number"], input[type="password"], input[type="search"],
+input:not([type]), .input, .select, .textarea, select, textarea {
   width: 100%;
   padding: .7rem .8rem;
   border: 1.5px solid var(--line);
