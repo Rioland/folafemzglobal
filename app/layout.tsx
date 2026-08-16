@@ -11,6 +11,7 @@ import './globals.css';
 import { settings } from '@/lib/content';
 import { BookingProvider } from '@/components/BookingModal';
 import { Footer, FloatingActions, Header, RevealOnScroll } from '@/components/SiteChrome';
+import AskAi from '@/components/AskAi';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main>{children}</main>
           <Footer />
           <FloatingActions />
+          <AskAi />
           <RevealOnScroll />
         </BookingProvider>
       </body>
