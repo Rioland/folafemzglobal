@@ -1,0 +1,884 @@
+{
+    "settings": {
+        "siteName": "Folafemz Global NIG LTD",
+        "tagline": "Chauffeur-driven cars, buses and logistics across Nigeria",
+        "logo": "/images/brand-mark.jpg",
+        "phone": "+234 814 991 6721",
+        "whatsapp": "2348149916721",
+        "email": "riotech2222@gmail.com",
+        "addressPrimary": "Lagos — Victoria Island",
+        "addressSecondary": "Abuja — Wuse II",
+        "businessHours": "Dispatch desk open 24 hours, every day",
+        "heroEyebrow": "Lagos · Abuja · Port Harcourt · Ibadan",
+        "heroHeading": "Vehicles and drivers you can build a schedule around",
+        "heroSubheading": "Chauffeur-driven cars, self-drive hire, airport pickups, interstate travel, moving trucks and security escorts. Quoted in minutes on WhatsApp, delivered to your door.",
+        "heroImage": "/images/hero-night-highway.jpg",
+        "fleetNote": "Rates shown are per day within Lagos and Abuja, and include the driver, fuel inside the city and insurance. Other cities, interstate routes, self-drive and moving trucks are quoted on request.",
+        "aboutHeading": "Built for people who cannot afford to be late",
+        "aboutBody": "Most hire problems are not car problems. They are dispatch problems: nobody answers, the driver leaves late, the vehicle turns up dirty. We run a maintained fleet, vetted drivers who know their routes, and a desk that picks up. Corporate accounts, weddings, airport runs and long-term leases all run to the same standard.",
+        "trustPoints": [
+            "Quoted on WhatsApp in minutes",
+            "Delivered anywhere in the cities we cover",
+            "Insurance on every vehicle",
+            "Backup vehicle if yours develops a fault",
+            "Daily, weekly and monthly terms",
+            "One agreed price, no surprises on the day"
+        ],
+        "statYears": "6",
+        "statClients": "1,500",
+        "statVehicles": "40",
+        "statRating": "4.8",
+        "metaTitle": "Car Hire Nigeria | Chauffeur, Self Drive, Buses & Moving Trucks",
+        "metaDescription": "Daily, weekly and monthly car hire in Lagos, Abuja, Port Harcourt and Ibadan. SUVs, buses, luxury cars, moving trucks and security escorts, with driver and insurance included.",
+        "metaKeywords": "car hire nigeria, car rental lagos, car rental abuja, chauffeur service lagos, moving truck hire, self drive car rental nigeria, airport pickup lagos",
+        "ogImage": "/images/brand-lockup.jpg",
+        "facebookUrl": "",
+        "instagramUrl": "",
+        "twitterUrl": "",
+        "tiktokUrl": ""
+    },
+    "categories": [
+        {
+            "name": "SUVs",
+            "slug": "suvs"
+        },
+        {
+            "name": "Sedans",
+            "slug": "sedans"
+        },
+        {
+            "name": "Buses & Minivans",
+            "slug": "buses-minivans"
+        },
+        {
+            "name": "Premium & Luxury",
+            "slug": "premium-luxury"
+        },
+        {
+            "name": "Logistics & Other",
+            "slug": "logistics-other"
+        }
+    ],
+    "vehicles": [
+        {
+            "name": "Toyota Prado 2022",
+            "slug": "toyota-prado-2022",
+            "category": "SUVs",
+            "categorySlug": "suvs",
+            "dailyRate": 170000,
+            "dailyLabel": "Per day",
+            "secondaryRate": 100000,
+            "secondaryLabel": "Airport",
+            "rateNote": null,
+            "seats": "7 seats",
+            "description": "The default choice for executive movement in Lagos and Abuja. High clearance for bad roads, quiet on the highway, and comfortable enough for a full day of meetings.",
+            "image": "/images/suv-black.jpg",
+            "isFeatured": true
+        },
+        {
+            "name": "Lexus GX 460",
+            "slug": "lexus-gx-460",
+            "category": "SUVs",
+            "categorySlug": "suvs",
+            "dailyRate": 200000,
+            "dailyLabel": "Per day",
+            "secondaryRate": 120000,
+            "secondaryLabel": "Airport",
+            "rateNote": null,
+            "seats": "7 seats",
+            "description": "A step up from the Prado in cabin finish and ride quality. Popular for hosting visiting directors and for wedding convoys where the car is part of the picture.",
+            "image": "/images/suv-dark-estate.jpg",
+            "isFeatured": true
+        },
+        {
+            "name": "Toyota Land Cruiser",
+            "slug": "toyota-land-cruiser",
+            "category": "SUVs",
+            "categorySlug": "suvs",
+            "dailyRate": 400000,
+            "dailyLabel": "Per day",
+            "secondaryRate": 200000,
+            "secondaryLabel": "Airport",
+            "rateNote": null,
+            "seats": "7 seats",
+            "description": "Full-size, heavy and unbothered by long distances or rough surfaces. The vehicle we send for interstate convoys and site visits far outside the city.",
+            "image": "/images/suv-white-luxury.jpg",
+            "isFeatured": true
+        },
+        {
+            "name": "Toyota Hilux",
+            "slug": "toyota-hilux",
+            "category": "SUVs",
+            "categorySlug": "suvs",
+            "dailyRate": 150000,
+            "dailyLabel": "Per day",
+            "secondaryRate": 90000,
+            "secondaryLabel": "Airport",
+            "rateNote": null,
+            "seats": "5 seats",
+            "description": "Double-cab pickup for field teams. Load bed for equipment, and the clearance to reach sites that a saloon cannot.",
+            "image": "/images/suv-black.jpg",
+            "isFeatured": false
+        },
+        {
+            "name": "Toyota Camry 2014",
+            "slug": "toyota-camry-2014",
+            "category": "Sedans",
+            "categorySlug": "sedans",
+            "dailyRate": 130000,
+            "dailyLabel": "Per day",
+            "secondaryRate": 70000,
+            "secondaryLabel": "Airport",
+            "rateNote": null,
+            "seats": "4 seats",
+            "description": "Clean, quiet and economical. The sensible pick for airport runs, city meetings and daily staff transport where an SUV is more car than you need.",
+            "image": "/images/sedan-blue.jpg",
+            "isFeatured": false
+        },
+        {
+            "name": "Toyota Camry 2010",
+            "slug": "toyota-camry-2010",
+            "category": "Sedans",
+            "categorySlug": "sedans",
+            "dailyRate": 100000,
+            "dailyLabel": "Per day",
+            "secondaryRate": 60000,
+            "secondaryLabel": "Airport",
+            "rateNote": null,
+            "seats": "4 seats",
+            "description": "Our entry-level saloon. Same driver standard and same insurance as everything else in the fleet, at the lowest daily rate we offer.",
+            "image": "/images/sedan-silver.jpg",
+            "isFeatured": false
+        },
+        {
+            "name": "Toyota Sienna 2014",
+            "slug": "toyota-sienna-2014",
+            "category": "Buses & Minivans",
+            "categorySlug": "buses-minivans",
+            "dailyRate": 160000,
+            "dailyLabel": "Per day",
+            "secondaryRate": 100000,
+            "secondaryLabel": "Airport",
+            "rateNote": null,
+            "seats": "7 seats",
+            "description": "Family and small-group transport with proper luggage space behind the third row. Sliding doors make it easy in tight compounds and car parks.",
+            "image": "/images/bus-hiace.jpg",
+            "isFeatured": false
+        },
+        {
+            "name": "Toyota Sienna 2006",
+            "slug": "toyota-sienna-2006",
+            "category": "Buses & Minivans",
+            "categorySlug": "buses-minivans",
+            "dailyRate": 140000,
+            "dailyLabel": "Per day",
+            "secondaryRate": 70000,
+            "secondaryLabel": "Airport",
+            "rateNote": null,
+            "seats": "7 seats",
+            "description": "The budget seven-seater. Well maintained, air conditioning throughout, and the cheapest way to move a family with luggage.",
+            "image": "/images/bus-hiace.jpg",
+            "isFeatured": false
+        },
+        {
+            "name": "Toyota Hiace Bus",
+            "slug": "toyota-hiace-bus",
+            "category": "Buses & Minivans",
+            "categorySlug": "buses-minivans",
+            "dailyRate": 200000,
+            "dailyLabel": "Per day",
+            "secondaryRate": 100000,
+            "secondaryLabel": "Airport",
+            "rateNote": null,
+            "seats": "14 seats",
+            "description": "The workhorse for staff runs, church trips and airport groups. Fourteen seats, air conditioned, with room for bags on a longer journey.",
+            "image": "/images/bus-hiace.jpg",
+            "isFeatured": false
+        },
+        {
+            "name": "Toyota Coaster Bus",
+            "slug": "toyota-coaster-bus",
+            "category": "Buses & Minivans",
+            "categorySlug": "buses-minivans",
+            "dailyRate": 300000,
+            "dailyLabel": "Per day",
+            "secondaryRate": 200000,
+            "secondaryLabel": "Airport",
+            "rateNote": null,
+            "seats": "30 seats",
+            "description": "Thirty seats for conferences, corporate away days and large church or school movements. Comes with a driver used to managing a full bus.",
+            "image": "/images/interstate-minibus.jpg",
+            "isFeatured": false
+        },
+        {
+            "name": "Mercedes Sprinter",
+            "slug": "mercedes-sprinter",
+            "category": "Buses & Minivans",
+            "categorySlug": "buses-minivans",
+            "dailyRate": 700000,
+            "dailyLabel": "Per day",
+            "secondaryRate": null,
+            "secondaryLabel": "Airport",
+            "rateNote": null,
+            "seats": "18 seats",
+            "description": "High-roof executive shuttle. Stand-up cabin, individual seats and a far quieter ride than a standard bus — used for VIP delegations and hotel transfers.",
+            "image": "/images/interstate-minibus.jpg",
+            "isFeatured": false
+        },
+        {
+            "name": "Lexus LX 570",
+            "slug": "lexus-lx-570",
+            "category": "Premium & Luxury",
+            "categorySlug": "premium-luxury",
+            "dailyRate": 450000,
+            "dailyLabel": "Per day",
+            "secondaryRate": 200000,
+            "secondaryLabel": "Airport",
+            "rateNote": null,
+            "seats": "7 seats",
+            "description": "Top of the standard fleet. Full-size luxury SUV for principals, visiting executives and weddings where the lead car matters.",
+            "image": "/images/suv-white-luxury.jpg",
+            "isFeatured": false
+        },
+        {
+            "name": "Mercedes G-Class",
+            "slug": "mercedes-g-class",
+            "category": "Premium & Luxury",
+            "categorySlug": "premium-luxury",
+            "dailyRate": null,
+            "dailyLabel": "Per day",
+            "secondaryRate": null,
+            "secondaryLabel": "Airport",
+            "rateNote": "Request a quote",
+            "seats": "5 seats",
+            "description": "Statement vehicle for weddings, photo shoots and events. Limited availability, so book early. Priced per engagement rather than per day.",
+            "image": "/images/suv-g-class.jpg",
+            "isFeatured": false
+        },
+        {
+            "name": "Armoured B6 SUV",
+            "slug": "armoured-b6-suv",
+            "category": "Premium & Luxury",
+            "categorySlug": "premium-luxury",
+            "dailyRate": null,
+            "dailyLabel": "Per day",
+            "secondaryRate": null,
+            "secondaryLabel": "Airport",
+            "rateNote": "Request a quote",
+            "seats": "5 seats",
+            "description": "B6-rated armoured vehicle with a security-trained driver. Supplied with documentation and, where required, an escort team. Quoted per assignment after a short brief.",
+            "image": "/images/suv-g-class.jpg",
+            "isFeatured": false
+        },
+        {
+            "name": "Moving Truck",
+            "slug": "moving-truck",
+            "category": "Logistics & Other",
+            "categorySlug": "logistics-other",
+            "dailyRate": null,
+            "dailyLabel": "Per day",
+            "secondaryRate": null,
+            "secondaryLabel": "Airport",
+            "rateNote": "Request a quote",
+            "seats": null,
+            "description": "Home and office relocations with a loading crew, wrapping materials and a driver who knows how to get a truck into a Lagos estate.",
+            "image": "/images/moving-van.jpg",
+            "isFeatured": false
+        },
+        {
+            "name": "Interstate Travel",
+            "slug": "interstate-travel",
+            "category": "Logistics & Other",
+            "categorySlug": "logistics-other",
+            "dailyRate": null,
+            "dailyLabel": "Per day",
+            "secondaryRate": null,
+            "secondaryLabel": "Airport",
+            "rateNote": "Request a quote",
+            "seats": null,
+            "description": "Point-to-point road travel between states with a rested, route-familiar driver. Quoted by route, not by day.",
+            "image": "/images/interstate-minibus.jpg",
+            "isFeatured": false
+        },
+        {
+            "name": "Security Escort",
+            "slug": "security-escort",
+            "category": "Logistics & Other",
+            "categorySlug": "logistics-other",
+            "dailyRate": null,
+            "dailyLabel": "Per day",
+            "secondaryRate": null,
+            "secondaryLabel": "Airport",
+            "rateNote": "Request a quote",
+            "seats": null,
+            "description": "Trained escort teams and lead vehicles for sensitive movements, cash-in-transit support and VIP protection.",
+            "image": "/images/night-drive.jpg",
+            "isFeatured": false
+        },
+        {
+            "name": "Self Drive Hire",
+            "slug": "self-drive-hire",
+            "category": "Logistics & Other",
+            "categorySlug": "logistics-other",
+            "dailyRate": null,
+            "dailyLabel": "Per day",
+            "secondaryRate": null,
+            "secondaryLabel": "Airport",
+            "rateNote": "Request a quote",
+            "seats": null,
+            "description": "Drive it yourself. Valid licence, a verification check and a refundable deposit; insurance and papers are handled by us.",
+            "image": "/images/interior-console.jpg",
+            "isFeatured": false
+        }
+    ],
+    "cities": [
+        {
+            "name": "Lagos",
+            "slug": "lagos",
+            "state": "Lagos State",
+            "tagline": "Island and mainland coverage, airport runs around the clock",
+            "rating": "4.9/5",
+            "areasSummary": "Victoria Island, Lekki, Ikeja, Ikoyi",
+            "intro": "Lagos punishes bad planning. A meeting on the Island and another on the mainland can be forty minutes apart or three hours apart depending on when you leave, and no amount of horsepower fixes that. What fixes it is a driver who knows which bridge to take at four in the afternoon. Our Lagos fleet runs from Victoria Island with a standing presence at both terminals of Murtala Muhammed, so airport pickups do not depend on someone setting off from across the city when your flight lands.",
+            "highlights": [
+                "Corporate fleet management and monthly contracts",
+                "Island to mainland commuting with fixed pricing",
+                "Wedding cars and decorated convoys",
+                "Airport transfers with flight tracking",
+                "Moving trucks with a loading crew"
+            ],
+            "officeAddress": "Victoria Island, Lagos",
+            "airportBranch": "Murtala Muhammed International Airport",
+            "heroImage": "/images/chauffeur-service.jpg",
+            "metaTitle": "Car Hire in Lagos | Chauffeur, Self Drive & Bus Rental",
+            "metaDescription": "Rent a car with a driver in Lagos. SUVs, saloons, buses and moving trucks, with insurance and fuel inside the city included. Quoted on WhatsApp in minutes."
+        },
+        {
+            "name": "Abuja",
+            "slug": "abuja",
+            "state": "Federal Capital Territory",
+            "tagline": "Government, diplomatic and conference transport",
+            "rating": "4.8/5",
+            "areasSummary": "Maitama, Wuse, Garki, Asokoro",
+            "intro": "Abuja work is protocol work. Delegations arrive on a fixed schedule, sit in sessions that overrun, and need vehicles waiting rather than summoned. Our Abuja desk runs from Wuse II and handles the things that go wrong around conferences: a session that ends two hours late, a principal who needs to leave early, a delegation that grew by four people overnight. Vehicles are presented clean, drivers are briefed on the itinerary, and the airport road is covered at any hour.",
+            "highlights": [
+                "Diplomatic and protocol vehicles",
+                "Conference and event fleets",
+                "Executive transport with briefed drivers",
+                "Airport transfers at any hour",
+                "Armoured vehicles on request"
+            ],
+            "officeAddress": "Wuse II, Abuja",
+            "airportBranch": "Nnamdi Azikiwe International Airport",
+            "heroImage": "/images/suv-white-luxury.jpg",
+            "metaTitle": "Car Hire in Abuja | Chauffeur, Self Drive & Bus Rental",
+            "metaDescription": "Rent a car with a driver in Abuja. SUVs, saloons, buses and moving trucks, with insurance and fuel inside the city included. Quoted on WhatsApp in minutes."
+        },
+        {
+            "name": "Port Harcourt",
+            "slug": "port-harcourt",
+            "state": "Rivers State",
+            "tagline": "Oil and gas site visits, corporate transport",
+            "rating": "4.8/5",
+            "areasSummary": "GRA, Trans Amadi, Eliozu",
+            "intro": "Port Harcourt hire is mostly industrial. Crews need to reach sites down roads that chew up low vehicles, on schedules set by shift patterns rather than office hours. We keep high-clearance vehicles and drivers who have done the Trans Amadi and Eliozu runs often enough to route around the flooding. Escort arrangements are available where a client requires them, arranged in advance rather than improvised.",
+            "highlights": [
+                "High-clearance vehicles for site visits",
+                "Shift-pattern scheduling for crews",
+                "Airport transfers",
+                "Event and conference transport",
+                "Security escorts on request"
+            ],
+            "officeAddress": "GRA Phase 2, Port Harcourt",
+            "airportBranch": "Port Harcourt International Airport",
+            "heroImage": "/images/night-drive.jpg",
+            "metaTitle": "Car Hire in Port Harcourt | Chauffeur, Self Drive & Bus Rental",
+            "metaDescription": "Rent a car with a driver in Port Harcourt. SUVs, saloons, buses and moving trucks, with insurance and fuel inside the city included. Quoted on WhatsApp in minutes."
+        },
+        {
+            "name": "Ibadan",
+            "slug": "ibadan",
+            "state": "Oyo State",
+            "tagline": "Executive travel and long-term corporate hire",
+            "rating": "4.8/5",
+            "areasSummary": "Bodija, Ring Road, Jericho",
+            "intro": "Ibadan sits close enough to Lagos that a lot of our work here is the Lagos–Ibadan run itself: staff moving between offices, families travelling for ceremonies, and companies that would rather not put an employee on the expressway in their own car. We price that route point to point. Inside the city we handle the usual mix of executive hire, weddings and monthly contracts.",
+            "highlights": [
+                "Lagos–Ibadan expressway runs priced by route",
+                "Corporate and executive transport",
+                "Wedding hire",
+                "Monthly and quarterly lease terms"
+            ],
+            "officeAddress": "Bodija, Ibadan",
+            "airportBranch": "Ibadan Airport",
+            "heroImage": "/images/sedan-blue.jpg",
+            "metaTitle": "Car Hire in Ibadan | Chauffeur, Self Drive & Bus Rental",
+            "metaDescription": "Rent a car with a driver in Ibadan. SUVs, saloons, buses and moving trucks, with insurance and fuel inside the city included. Quoted on WhatsApp in minutes."
+        }
+    ],
+    "locations": [
+        {
+            "name": "Lekki Phase 1",
+            "slug": "lekki-phase-1",
+            "city": "Lagos",
+            "citySlug": "lagos",
+            "landmarks": null,
+            "blurb": "We deliver to Lekki Phase 1 and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Wuse 2",
+            "slug": "wuse-2",
+            "city": "Abuja",
+            "citySlug": "abuja",
+            "landmarks": null,
+            "blurb": "We deliver to Wuse 2 and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "GRA Port Harcourt",
+            "slug": "gra-port-harcourt",
+            "city": "Port Harcourt",
+            "citySlug": "port-harcourt",
+            "landmarks": null,
+            "blurb": "We deliver to GRA Port Harcourt and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Bodija",
+            "slug": "bodija",
+            "city": "Ibadan",
+            "citySlug": "ibadan",
+            "landmarks": null,
+            "blurb": "We deliver to Bodija and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Victoria Island",
+            "slug": "victoria-island",
+            "city": "Lagos",
+            "citySlug": "lagos",
+            "landmarks": null,
+            "blurb": "We deliver to Victoria Island and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Maitama",
+            "slug": "maitama",
+            "city": "Abuja",
+            "citySlug": "abuja",
+            "landmarks": null,
+            "blurb": "We deliver to Maitama and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Trans Amadi",
+            "slug": "trans-amadi",
+            "city": "Port Harcourt",
+            "citySlug": "port-harcourt",
+            "landmarks": null,
+            "blurb": "We deliver to Trans Amadi and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Jericho",
+            "slug": "jericho",
+            "city": "Ibadan",
+            "citySlug": "ibadan",
+            "landmarks": null,
+            "blurb": "We deliver to Jericho and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Ikeja",
+            "slug": "ikeja",
+            "city": "Lagos",
+            "citySlug": "lagos",
+            "landmarks": null,
+            "blurb": "We deliver to Ikeja and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Asokoro",
+            "slug": "asokoro",
+            "city": "Abuja",
+            "citySlug": "abuja",
+            "landmarks": null,
+            "blurb": "We deliver to Asokoro and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Eliozu",
+            "slug": "eliozu",
+            "city": "Port Harcourt",
+            "citySlug": "port-harcourt",
+            "landmarks": null,
+            "blurb": "We deliver to Eliozu and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Ring Road",
+            "slug": "ring-road",
+            "city": "Ibadan",
+            "citySlug": "ibadan",
+            "landmarks": null,
+            "blurb": "We deliver to Ring Road and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Ikoyi",
+            "slug": "ikoyi",
+            "city": "Lagos",
+            "citySlug": "lagos",
+            "landmarks": null,
+            "blurb": "We deliver to Ikoyi and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Garki",
+            "slug": "garki",
+            "city": "Abuja",
+            "citySlug": "abuja",
+            "landmarks": null,
+            "blurb": "We deliver to Garki and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Rumuokoro",
+            "slug": "rumuokoro",
+            "city": "Port Harcourt",
+            "citySlug": "port-harcourt",
+            "landmarks": null,
+            "blurb": "We deliver to Rumuokoro and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Akobo",
+            "slug": "akobo",
+            "city": "Ibadan",
+            "citySlug": "ibadan",
+            "landmarks": null,
+            "blurb": "We deliver to Akobo and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Ajah",
+            "slug": "ajah",
+            "city": "Lagos",
+            "citySlug": "lagos",
+            "landmarks": null,
+            "blurb": "We deliver to Ajah and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Gwarinpa",
+            "slug": "gwarinpa",
+            "city": "Abuja",
+            "citySlug": "abuja",
+            "landmarks": null,
+            "blurb": "We deliver to Gwarinpa and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Woji",
+            "slug": "woji",
+            "city": "Port Harcourt",
+            "citySlug": "port-harcourt",
+            "landmarks": null,
+            "blurb": "We deliver to Woji and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Yaba",
+            "slug": "yaba",
+            "city": "Lagos",
+            "citySlug": "lagos",
+            "landmarks": null,
+            "blurb": "We deliver to Yaba and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Central Business District",
+            "slug": "central-business-district",
+            "city": "Abuja",
+            "citySlug": "abuja",
+            "landmarks": null,
+            "blurb": "We deliver to Central Business District and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Surulere",
+            "slug": "surulere",
+            "city": "Lagos",
+            "citySlug": "lagos",
+            "landmarks": null,
+            "blurb": "We deliver to Surulere and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Utako",
+            "slug": "utako",
+            "city": "Abuja",
+            "citySlug": "abuja",
+            "landmarks": null,
+            "blurb": "We deliver to Utako and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Gbagada",
+            "slug": "gbagada",
+            "city": "Lagos",
+            "citySlug": "lagos",
+            "landmarks": null,
+            "blurb": "We deliver to Gbagada and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Jabi",
+            "slug": "jabi",
+            "city": "Abuja",
+            "citySlug": "abuja",
+            "landmarks": null,
+            "blurb": "We deliver to Jabi and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Maryland",
+            "slug": "maryland",
+            "city": "Lagos",
+            "citySlug": "lagos",
+            "landmarks": null,
+            "blurb": "We deliver to Maryland and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Kubwa",
+            "slug": "kubwa",
+            "city": "Abuja",
+            "citySlug": "abuja",
+            "landmarks": null,
+            "blurb": "We deliver to Kubwa and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Festac",
+            "slug": "festac",
+            "city": "Lagos",
+            "citySlug": "lagos",
+            "landmarks": null,
+            "blurb": "We deliver to Festac and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        },
+        {
+            "name": "Wuse Zone 4",
+            "slug": "wuse-zone-4",
+            "city": "Abuja",
+            "citySlug": "abuja",
+            "landmarks": null,
+            "blurb": "We deliver to Wuse Zone 4 and pick up from it daily. Give us the address and a time and the vehicle will be outside, not \"on the way\"."
+        }
+    ],
+    "services": [
+        {
+            "name": "Moving Truck",
+            "slug": "moving-truck",
+            "linkLabel": "Hire Moving Truck",
+            "headlineTemplate": "{service} in {location}, {city}",
+            "summary": "Home moves, office relocations and furniture transport with a loading crew and wrapping materials included.",
+            "body": "<p>A move goes wrong in the gaps: the truck arrives without wrapping, nobody thought about the estate gate closing at 8pm, the lift is booked for the wrong day. We quote the whole job rather than the vehicle.</p> <h3>What comes with the truck</h3> <ul><li>A loading crew sized to the job, not one driver and an apprentice</li><li>Wrapping material, blankets and straps for furniture and appliances</li><li>A driver used to getting a truck through estate gates and narrow compounds</li><li>Loading, transport, offloading and rough placement in the new space</li></ul> <h3>Before you book</h3> <p>Tell us the number of rooms, the floor you are on at both ends, and whether either building has a working lift. Those three facts move a quote more than distance does. For office moves, tell us whether the IT equipment is being handled by your own team.</p> <h3>Timing</h3> <p>Weekend moves book out first, particularly at month end. A weekday move is usually cheaper and always faster, because you are not competing for the lift or the gate.</p>",
+            "image": "/images/moving-van.jpg",
+            "showInDirectory": true,
+            "hasLandingPage": true
+        },
+        {
+            "name": "Airport Transfer",
+            "slug": "airport-transfer",
+            "linkLabel": "Book Airport Transfer",
+            "headlineTemplate": "{service} in {location}, {city}",
+            "summary": "Flight-tracked pickups and drop-offs with waiting time included, at both Lagos and Abuja terminals.",
+            "body": "<p>We track the flight, not the booking time. If you land ninety minutes late the driver is still there, and you are not charged for the delay.</p> <h3>How the pickup works</h3> <ul><li>Send the flight number when you book — that is what we monitor</li><li>The driver waits inside arrivals with a name board</li><li>Sixty minutes of waiting time is included after landing on domestic flights, ninety on international</li><li>One agreed price, including parking and tolls</li></ul> <h3>Coverage</h3> <p>We hold vehicles at Murtala Muhammed in Lagos and Nnamdi Azikiwe in Abuja, both terminals, at any hour. Port Harcourt and Ibadan airports are covered on advance booking.</p> <h3>Departures</h3> <p>For outbound flights we work backwards from your check-in time and the traffic on the day, and we will tell you honestly if the pickup time you have asked for is too late.</p>",
+            "image": "/images/chauffeur-service.jpg",
+            "showInDirectory": true,
+            "hasLandingPage": true
+        },
+        {
+            "name": "Wedding Car",
+            "slug": "wedding-car",
+            "linkLabel": "Hire Wedding Car",
+            "headlineTemplate": "{service} in {location}, {city}",
+            "summary": "Decorated vehicles, uniformed chauffeurs and convoy arrangements built around the day's timetable.",
+            "body": "<p>Wedding transport is a timetable problem wearing a nice suit. The cars matter, but what actually saves the day is a driver who knows he is collecting the couple from the church at 2pm and where he is parking until then.</p> <h3>What we arrange</h3> <ul><li>A lead car for the couple, decorated to your colours</li><li>Convoy vehicles for family and the bridal party</li><li>Uniformed chauffeurs briefed on the full run of the day</li><li>Buses for guest movement between the ceremony and reception</li></ul> <h3>Booking window</h3> <p>Book six to eight weeks out for a Saturday in December or January — those dates go first and they go early. For the statement vehicles, longer.</p> <h3>On the day</h3> <p>We ask for one contact who is not the couple. Somebody has to be reachable at 9am, and it should not be the bride.</p>",
+            "image": "/images/suv-g-class.jpg",
+            "showInDirectory": true,
+            "hasLandingPage": true
+        },
+        {
+            "name": "Corporate Car",
+            "slug": "corporate-car",
+            "linkLabel": "Hire Corporate Car",
+            "headlineTemplate": "{service} in {location}, {city}",
+            "summary": "Monthly and quarterly contracts with a dedicated driver, one invoice and a named account manager.",
+            "body": "<p>Running your own pool cars means running a small fleet business on the side: maintenance, licensing, driver cover when someone is sick. A monthly contract puts that on us.</p> <h3>How contracts work</h3> <ul><li>A dedicated vehicle and a dedicated driver, not whoever is free</li><li>Maintenance, servicing, insurance and papers handled by us</li><li>A replacement vehicle if yours goes in for work</li><li>One invoice a month and a named person to call</li></ul> <h3>Terms</h3> <p>Monthly is the shortest contract we do. Quarterly and annual terms are meaningfully cheaper per day, and for annual we will hold a specific vehicle for your account.</p> <h3>Drivers</h3> <p>Contract drivers are vetted, and you meet the driver before the contract starts. If the fit is wrong in the first fortnight we change them without argument.</p>",
+            "image": "/images/sedan-blue.jpg",
+            "showInDirectory": true,
+            "hasLandingPage": true
+        },
+        {
+            "name": "Luxury Car",
+            "slug": "luxury-car",
+            "linkLabel": "Rent Luxury Car",
+            "headlineTemplate": "{service} in {location}, {city}",
+            "summary": "Premium sedans and SUVs for visiting executives, photo shoots and events where the car is part of the impression.",
+            "body": "<p>Sometimes the vehicle is doing a job beyond transport — collecting an investor, carrying a principal into a venue, sitting in a shot. Those bookings are priced per engagement rather than per day.</p> <h3>Availability</h3> <p>The premium fleet is small and moves quickly. Tell us the date, the duration and roughly what the vehicle is for, and we will tell you honestly what is free.</p>",
+            "image": "/images/premium-front.jpg",
+            "showInDirectory": true,
+            "hasLandingPage": true
+        },
+        {
+            "name": "Security Escort",
+            "slug": "security-escort",
+            "linkLabel": "Hire Security Escort",
+            "headlineTemplate": "{service} in {location}, {city}",
+            "summary": "Trained escort teams and lead vehicles for sensitive movements, arranged in advance after a short brief.",
+            "body": "<p>Escort work is arranged, never improvised. We take a brief on the route, the timing and the risk profile, then propose a team and a vehicle configuration to match.</p> <h3>What a brief covers</h3> <ul><li>Route, timing and any fixed appointments along the way</li><li>Number of principals and vehicles in the movement</li><li>Whether the client requires armed or unarmed personnel</li><li>Coordination with any existing security detail</li></ul> <p>All escort personnel work within Nigerian law and with the appropriate authorisations. We will decline work we cannot staff properly.</p>",
+            "image": "/images/night-drive.jpg",
+            "showInDirectory": true,
+            "hasLandingPage": true
+        },
+        {
+            "name": "Armoured SUV",
+            "slug": "armoured-suv",
+            "linkLabel": "Hire Armoured SUV",
+            "headlineTemplate": "{service} in {location}, {city}",
+            "summary": "B6 and B7 rated vehicles with security-trained drivers, supplied with documentation.",
+            "body": "<p>Armoured vehicles are quoted per assignment. Availability is limited and paperwork takes time, so bring us the requirement early rather than the day before.</p> <h3>What we need to quote</h3> <ul><li>Protection level required (B6 is standard; B7 on request)</li><li>Duration and route</li><li>Whether an escort team is needed alongside the vehicle</li></ul> <p>Every armoured vehicle is supplied with its documentation and a driver trained for the vehicle's weight and handling, which is considerably different from a standard SUV.</p>",
+            "image": "/images/suv-g-class.jpg",
+            "showInDirectory": true,
+            "hasLandingPage": true
+        },
+        {
+            "name": "Self Drive",
+            "slug": "self-drive",
+            "linkLabel": "Rent Self Drive Car",
+            "headlineTemplate": "{service} in {location}, {city}",
+            "summary": "Drive it yourself, with insurance, documentation and roadside cover handled by us.",
+            "body": "<p>Self drive is the cheapest way to hire, because you are not paying for a driver's day. It comes with more paperwork, for obvious reasons.</p> <h3>What you need</h3> <ul><li>A valid Nigerian driver's licence held for at least two years</li><li>Government-issued ID and proof of address</li><li>A refundable deposit, returned after the vehicle is checked back in</li><li>A short verification call — usually same day</li></ul> <h3>What is included</h3> <p>Comprehensive insurance, all vehicle papers, and roadside assistance for the duration of the hire. Fuel is on you. The vehicle goes out full and should come back full.</p>",
+            "image": "/images/interior-console.jpg",
+            "showInDirectory": true,
+            "hasLandingPage": true
+        },
+        {
+            "name": "Interstate Travel",
+            "slug": "interstate-travel",
+            "linkLabel": "Book Interstate Travel",
+            "headlineTemplate": "{service} in {location}, {city}",
+            "summary": "Long-distance road travel with rested, route-familiar drivers, priced by route rather than by day.",
+            "body": "<p>Interstate is priced by route, because a Lagos–Benin run and a Lagos–Kano run are not the same job even if both take a day on paper.</p> <h3>How we run long distance</h3> <ul><li>Drivers who have run the specific route before</li><li>Departure timed so the difficult stretches are covered in daylight</li><li>A second driver on routes beyond a single safe driving day</li><li>Fuel and tolls built into the quoted price</li></ul> <h3>Common routes</h3> <p>Lagos–Abuja, Lagos–Ibadan, Lagos–Benin, Abuja–Kaduna and Abuja–Jos are routine for us. Anywhere else, give us the destination and we will price it.</p>",
+            "image": "/images/interstate-minibus.jpg",
+            "showInDirectory": true,
+            "hasLandingPage": true
+        },
+        {
+            "name": "Coaster Bus",
+            "slug": "coaster-bus",
+            "linkLabel": "Hire Coaster Bus",
+            "headlineTemplate": "{service} in {location}, {city}",
+            "summary": "Group movement for staff runs, church trips, school outings and conferences.",
+            "body": "<p>Thirty seats, air conditioned, with a driver used to managing a full bus and the questions that come with one.</p> <h3>Typical bookings</h3> <ul><li>Daily staff shuttles on a fixed route and timetable</li><li>Church and school trips, including interstate</li><li>Conference and delegate movement between hotel and venue</li><li>Wedding guest transport</li></ul> <h3>Pricing</h3> <p>Within the city we price per day. Interstate we price by route. Recurring staff runs are cheapest on a monthly contract.</p>",
+            "image": "/images/interstate-minibus.jpg",
+            "showInDirectory": true,
+            "hasLandingPage": true
+        }
+    ],
+    "posts": [
+        {
+            "title": "What it actually costs to hire a car in Lagos in 2026",
+            "slug": "what-it-actually-costs-to-hire-a-car-in-lagos-in-2026",
+            "category": "Pricing",
+            "excerpt": "A plain breakdown of daily, airport and monthly rates by vehicle class, plus the four extras that catch people out.",
+            "body": "<p>Most quotes you get for car hire in Lagos are not comparable, because different companies include different things. One price includes the driver and fuel, another does not, a third adds a \"logistics fee\" on the day. Here is how our pricing works and what to check when you are comparing.</p> <h2>Daily rates by vehicle class</h2> <p>A day means ten hours of vehicle and driver time within one city. Saloons such as a Camry run from NGN100,000. Mid-size SUVs — the Prado, the GX 460 — sit between NGN170,000 and NGN200,000. Full-size and luxury vehicles such as the Land Cruiser and LX 570 run from NGN400,000. Buses depend on capacity: a fourteen-seat Hiace is NGN200,000, a thirty-seat Coaster NGN300,000.</p> <h2>Airport transfers are not day rates</h2> <p>A single airport pickup or drop-off is priced separately and is substantially cheaper than a full day — roughly NGN60,000 to NGN70,000 for a saloon and NGN100,000 to NGN120,000 for an SUV. If all you need is a collection from Murtala Muhammed, do not let anyone sell you a full day.</p> <h2>The four things that change the price</h2> <ul> <li><strong>Overtime.</strong> Past ten hours, an hourly rate applies. Ask what it is before you book.</li> <li><strong>Leaving the city.</strong> The moment you cross into another state, city rates stop applying and route pricing starts.</li> <li><strong>Fuel outside the agreed area.</strong> City fuel is included. A run to Ibadan is not city fuel.</li> <li><strong>Waiting on standby.</strong> A vehicle held at your disposal all day costs the same whether it moves or not.</li> </ul> <h2>Where monthly hire beats daily</h2> <p>The arithmetic is simple. If you need a vehicle more than about eight days a month, a monthly contract costs less than paying by the day, and you get a dedicated driver, maintenance cover and a replacement vehicle when yours is being serviced.</p> <h2>What to ask before you pay a deposit</h2> <p>Ask four questions: is the driver included, is fuel included and within what area, what is the overtime rate, and what happens if the vehicle breaks down. Any company that cannot answer those in one message is going to be difficult on the day.</p>",
+            "coverImage": "/images/sedan-blue.jpg",
+            "readMinutes": 8,
+            "author": "Editorial desk",
+            "publishedAt": "2026-08-14 05:54:39",
+            "isFeatured": true
+        },
+        {
+            "title": "Prado or Hilux: choosing the right vehicle for site visits",
+            "slug": "prado-or-hilux-choosing-the-right-vehicle-for-site-visits",
+            "category": "Fleet",
+            "excerpt": "Clearance, comfort and running cost compared for teams working outside the city.",
+            "body": "<p>Field teams ask for a Prado and then discover that half their equipment will not fit. Here is how the two actually compare for site work.</p> <h2>Clearance and surface</h2> <p>Both handle bad roads. The Hilux handles worse ones, and it handles them loaded. If your route includes unsurfaced access roads in the rainy season, the pickup is the safer booking.</p> <h2>Carrying equipment</h2> <p>This is usually the deciding factor. The Hilux has an open load bed: generators, cable drums, survey equipment, anything you would rather not put in a cabin. The Prado gives you a sealed boot and seven seats, which is what you want when the cargo is people.</p> <h2>Comfort over distance</h2> <p>On a three-hour highway run, the Prado is a materially better place to sit, and a team that arrives rested works better. For site visits within an hour of base, that matters less than the load bed.</p> <h2>Cost</h2> <p>The Hilux runs about NGN20,000 a day cheaper and uses less fuel. Over a month-long project that is a real number.</p> <h2>The short answer</h2> <p>Carrying equipment or reaching difficult sites: Hilux. Carrying people any distance: Prado. Doing both regularly: book one of each and stop compromising.</p>",
+            "coverImage": "/images/suv-black.jpg",
+            "readMinutes": 6,
+            "author": "Editorial desk",
+            "publishedAt": "2026-08-03 05:54:39",
+            "isFeatured": false
+        },
+        {
+            "title": "Planning wedding transport that actually runs on time",
+            "slug": "planning-wedding-transport-that-actually-runs-on-time",
+            "category": "Events",
+            "excerpt": "Convoy sizing, timing buffers and the details that keep a wedding day moving.",
+            "body": "<p>Wedding transport fails in predictable ways. Almost all of them are timetable failures rather than vehicle failures.</p> <h2>Size the convoy honestly</h2> <p>Count the people who must be moved, not the people you would like to move. A lead car for the couple, one vehicle for immediate family on each side, and a bus for the bridal party covers most weddings. Guests generally arrange themselves, and planning as though they will not is how budgets get destroyed.</p> <h2>Build in the buffer everyone skips</h2> <p>The gap between the ceremony ending and the reception starting is where days collapse. Photographs always overrun. Add forty-five minutes to whatever your planner has written down, and tell the drivers the padded time, not the optimistic one.</p> <h2>Nominate a contact who is not the couple</h2> <p>Someone has to be reachable from 8am. It cannot be the bride and it should not be the groom. Give the transport company one name and one number, and make sure that person has the full running order.</p> <h2>Brief the drivers on the whole day</h2> <p>A driver who knows he collects the couple at 2pm and where he waits until then will be in position. A driver who only knows the pickup address will be somewhere else when you need him.</p> <h2>Book earlier than feels necessary</h2> <p>December and January Saturdays go first, and they go months out. If you want a specific vehicle for the lead car, six to eight weeks is the minimum.</p>",
+            "coverImage": "/images/suv-g-class.jpg",
+            "readMinutes": 7,
+            "author": "Editorial desk",
+            "publishedAt": "2026-07-23 05:54:39",
+            "isFeatured": false
+        },
+        {
+            "title": "A checklist for moving an office over one weekend",
+            "slug": "a-checklist-for-moving-an-office-over-one-weekend",
+            "category": "Logistics",
+            "excerpt": "Sequencing, packing and access arrangements for a relocation with no Monday downtime.",
+            "body": "<p>An office move has one real deadline: people sitting down and working on Monday morning. Everything else is sequencing.</p> <h2>Two weeks out</h2> <ul><li>Confirm lift booking and loading access at both buildings, in writing</li><li>Check whether either building restricts weekend access hours</li><li>Decide who handles IT equipment — your team or ours</li><li>Label every desk and cabinet with its destination room</li></ul> <h2>The week before</h2> <ul><li>Pack everything that is not needed to trade in the final week</li><li>Photograph the back of every server and switch before anything is unplugged</li><li>Confirm parking for the truck at both ends — this is the single most common failure</li></ul> <h2>Moving day sequence</h2> <p>Load in reverse order of need. The things that must be working first — network equipment, the reception desk, the MD's office — go on last and come off first. Everything else follows.</p> <h2>Sunday</h2> <p>Reserve Sunday for IT and testing, not for moving furniture. If furniture is still moving on Sunday afternoon, Monday will not work.</p> <h2>What to tell your transport company</h2> <p>Number of rooms, floor at both ends, working lift or not, and whether there is a time window for access. Those four facts determine the crew size and the quote more than the distance does.</p>",
+            "coverImage": "/images/moving-van.jpg",
+            "readMinutes": 7,
+            "author": "Editorial desk",
+            "publishedAt": "2026-07-12 05:54:39",
+            "isFeatured": false
+        },
+        {
+            "title": "Renewing your Nigerian vehicle documents without the runaround",
+            "slug": "renewing-your-nigerian-vehicle-documents-without-the-runaround",
+            "category": "Compliance",
+            "excerpt": "Which documents you need, what they cost, and which ones are worth handling early.",
+            "body": "<p>Every vehicle on Nigerian roads needs the same core set of papers. Missing one turns a routine stop into a long afternoon.</p> <h2>The documents that matter</h2> <ul> <li><strong>Vehicle licence</strong> — renewed annually, the one most often allowed to lapse</li> <li><strong>Insurance certificate</strong> — third-party is the legal minimum; comprehensive is what any hire vehicle should carry</li> <li><strong>Roadworthiness certificate</strong> — annual, requires an inspection</li> <li><strong>Proof of ownership</strong> — issued once, keep the original somewhere safe and a copy in the vehicle</li> <li><strong>Hackney permit</strong> — required if the vehicle carries passengers commercially, which includes hire vehicles</li> </ul> <h2>Renew before expiry, not after</h2> <p>Renewals are straightforward while the document is still valid and become tedious once it has lapsed. Set a calendar reminder six weeks before each expiry date.</p> <h2>If you are hiring rather than owning</h2> <p>This is our problem, not yours. Every vehicle we hire out goes with its full document set, and if you are stopped, the papers are in the car. Ask to see them before you drive away on a self-drive booking — a company that hesitates is telling you something.</p>",
+            "coverImage": "/images/interior-console.jpg",
+            "readMinutes": 6,
+            "author": "Editorial desk",
+            "publishedAt": "2026-07-01 05:54:39",
+            "isFeatured": false
+        }
+    ],
+    "faqs": [
+        {
+            "question": "How much does it cost to rent a car for a day in Lagos or Abuja?",
+            "answer": "It depends on the vehicle. Saloons such as the Camry start around NGN100,000 a day, mid-size SUVs like the Prado sit around NGN170,000, and full-size or luxury vehicles are quoted individually. Every rate on this site includes the driver, fuel within the city and insurance. Airport-only transfers are cheaper than a full day and are shown separately on each vehicle."
+        },
+        {
+            "question": "What is included in the daily rate?",
+            "answer": "The vehicle, a vetted driver, fuel for movement inside the agreed city, and comprehensive insurance. A day runs to ten hours; beyond that an overtime rate applies and we tell you what it is before you book, not afterwards."
+        },
+        {
+            "question": "Do you offer monthly or long-term rentals?",
+            "answer": "Yes, and they are considerably cheaper per day than daily hire. Monthly is the shortest contract term we offer. Quarterly and annual contracts get a dedicated vehicle and driver assigned to your account, with maintenance and replacement cover included."
+        },
+        {
+            "question": "How far in advance should I book?",
+            "answer": "Same-day is usually possible for standard saloons and SUVs if you call early. For weddings, convoys, coaster buses and armoured vehicles, book at least one to two weeks out — and six to eight weeks for a Saturday in December or January."
+        },
+        {
+            "question": "Is fuel included?",
+            "answer": "Fuel is included for movement within the agreed city. Interstate travel is quoted separately by route, with fuel and tolls built into that price. On self-drive hire, fuel is yours: the vehicle goes out full and should come back full."
+        },
+        {
+            "question": "Can I hire a car without a driver?",
+            "answer": "Yes. Self-drive requires a valid Nigerian driver's licence held for at least two years, government-issued ID, proof of address and a refundable deposit. There is a short verification call, usually completed the same day."
+        },
+        {
+            "question": "What happens if the vehicle develops a fault mid-hire?",
+            "answer": "We send a replacement. That is the point of running a fleet rather than a single car — you should not lose a day because of our maintenance schedule."
+        },
+        {
+            "question": "Which areas do you deliver to?",
+            "answer": "Anywhere in Lagos, Abuja, Port Harcourt and Ibadan, including both airports in Lagos and Abuja. Our locations directory lists every area we cover. If your address is not on it, ask anyway — it is usually still a yes."
+        },
+        {
+            "question": "How do I pay, and do you take a deposit?",
+            "answer": "Bank transfer for most bookings. Corporate accounts are invoiced monthly. Self-drive requires a refundable deposit; chauffeur-driven hire usually does not. We confirm the full price in writing on WhatsApp before the vehicle moves."
+        },
+        {
+            "question": "Can I extend a booking that has already started?",
+            "answer": "Usually yes, subject to whether the vehicle is committed elsewhere. Tell us as early as you can — an extension asked for at 9am is nearly always possible, one asked for at 6pm often is not."
+        }
+    ],
+    "pages": [
+        {
+            "title": "Privacy Policy",
+            "slug": "privacy-policy",
+            "body": "<p><em>Last updated: August 2026. Review this with a lawyer before you rely on it.</em></p> <h2>What we collect</h2> <p>When you submit a booking request we collect your name, phone number, and optionally your email address, along with the details of the trip you are asking about: dates, pickup and destination, vehicle and any notes you add.</p> <h2>Why we collect it</h2> <p>To quote and fulfil your booking, to contact you about it, and to keep a record of work we have done. We do not sell your information to anyone.</p> <h2>Who sees it</h2> <p>Our dispatch staff, and the driver assigned to your booking, who receives only what he needs to complete the job. If you continue the conversation on WhatsApp, that exchange is also governed by WhatsApp's own privacy policy.</p> <h2>How long we keep it</h2> <p>Booking records are retained for accounting and dispute purposes. You may ask us to delete your details at any time by emailing us, and we will do so except where we are required to retain records.</p> <h2>Cookies and analytics</h2> <p>This site uses cookies necessary for the booking form to function. If analytics are enabled, aggregate visit data may be collected to help us understand which pages are useful.</p> <h2>Your rights</h2> <p>Under the Nigeria Data Protection Act you may request a copy of the personal data we hold about you, ask us to correct it, or ask us to delete it. Contact us using the details on our contact page.</p>",
+            "showInFooter": true
+        },
+        {
+            "title": "Terms of Service",
+            "slug": "terms-of-service",
+            "body": "<p><em>Last updated: August 2026. Review this with a lawyer before you rely on it.</em></p> <h2>Bookings and quotes</h2> <p>A booking is confirmed when we have acknowledged it in writing and any required deposit has been received. Quoted prices hold for the vehicle, dates and area specified in the quote.</p> <h2>What a daily rate includes</h2> <p>Unless stated otherwise, a daily rate covers the vehicle, the driver, fuel for movement within the agreed city, and comprehensive insurance, for up to ten hours. Time beyond ten hours is charged at the overtime rate quoted at the time of booking. Travel outside the agreed city is priced separately.</p> <h2>Self-drive hire</h2> <p>Self-drive requires a valid Nigerian driver's licence held for at least two years, government-issued identification, proof of address, and a refundable deposit. The vehicle is supplied with a full tank and must be returned with a full tank. The hirer is responsible for traffic offences and fines incurred during the hire period.</p> <h2>Cancellation</h2> <p>Cancellations made more than 24 hours before the booking start are refunded in full. Within 24 hours, a portion may be retained to cover the driver and vehicle already committed. Cancellations for wedding and event bookings are subject to the terms in the individual quote.</p> <h2>Vehicle faults and substitution</h2> <p>If a vehicle becomes unavailable or develops a fault, we will supply a replacement of equivalent or higher class at no additional cost. If we cannot, the unused portion of the hire is refunded.</p> <h2>Liability</h2> <p>Our liability is limited to the value of the booking. We are not liable for consequential losses, including missed flights or appointments, arising from traffic, road closures or other conditions outside our control.</p> <h2>Governing law</h2> <p>These terms are governed by the laws of the Federal Republic of Nigeria.</p>",
+            "showInFooter": true
+        }
+    ],
+    "testimonials": []
+}
