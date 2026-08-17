@@ -106,6 +106,9 @@ export type TripRates = {
   escort: { label: string; rate: number; unit: string; note: string };
 };
 
+export type GalleryShot = { src: string; caption: string };
+export type FleetVideo = { src: string; orientation: 'landscape' | 'portrait'; caption: string };
+
 export type Faq = { question: string; answer: string };
 export type Page = { title: string; slug: string; body: string | null; showInFooter: boolean };
 export type Testimonial = {
@@ -136,6 +139,8 @@ type Content = {
   pages: Page[];
   testimonials: Testimonial[];
   tripRates: TripRates;
+  gallery: GalleryShot[];
+  videos: FleetVideo[];
 };
 
 const content = raw as Content;
@@ -151,6 +156,8 @@ export const faqs = content.faqs;
 export const pages = content.pages;
 export const testimonials = content.testimonials;
 export const tripRates = content.tripRates;
+export const gallery = content.gallery;
+export const videos = content.videos;
 
 /* --------------------------------------------------------------------------
    Lookups

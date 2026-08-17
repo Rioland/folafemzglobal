@@ -37,10 +37,37 @@ Drop a real photograph at the same path. Nothing in `data/content.json` or the
 components refers to how the image was made, so a swap needs no code change.
 Roughly 1200×800 (3:2) keeps the cards uniform.
 
-## Known problem elsewhere
+## The client's own photographs — now the primary source
 
-`public/images/sedan-blue.jpg` is a **BMW 3-Series** and
-`public/images/sedan-silver.jpg` a **Hyundai Sonata**, and both are currently
-the photos on the live **Toyota Camry** cards. `premium-black.jpg` is a Corvette
-and `premium-front.jpg` an Audi R8. These predate the fleet expansion and are
-still in place — worth fixing with real photographs of the actual fleet.
+Supplied by the client and used for ten fleet cards plus the gallery. Originals
+live in `assets/fleet-originals/` — outside `public/`, so they stay in the repo
+for future re-crops without being served to browsers.
+
+Most are portrait phone shots. A 3:2 band cut from a 3:4 photo slices the
+vehicle in half, so those are fitted whole with the gap filled by a blurred,
+darkened blow-up of the same frame. Landscape sources are cropped normally.
+
+| Card | Source | Vehicle |
+|---|---|---|
+| `toyota-camry-2014.jpg`, `toyota-camry-2010.jpg` | toyota camry.jpeg | Black Camry |
+| `toyota-prado-2022.jpg` | toyota prado pilot.jpeg | Prado, Ondo plate |
+| `lexus-gx-460.jpg` | 1000685880.jpeg | Lexus GX 460 |
+| `lexus-lx-570.jpg` | 1000685921.jpeg | Lexus LX 570 |
+| `toyota-corolla-2016.jpg` | 1000685915.jpeg | White Corolla, Ondo plate |
+| `toyota-hiace-bus.jpg` | 1000685877.jpg | Hiace, Lagos plate |
+| `toyota-hilux.jpg` | 1000685876.jpeg | White Hilux, light bar |
+| `security-escort.jpg` | 1000685878.jpeg | Black Hilux TRD, police lights |
+| `kia-sportage.jpg` | kia.jpeg | Black Kia Sportage |
+
+Videos are in `public/video/`, moved out of `public/images/` because they are
+not images.
+
+## Resolved: the wrong-badge photos
+
+`sedan-blue.jpg` (a BMW 3-Series) and `sedan-silver.jpg` (a Hyundai Sonata)
+were the photos on the live Camry cards. Both Camry listings now carry the
+client's actual Camry, and no vehicle references either file. They remain in
+`public/images/` only because other page furniture may use them.
+
+`premium-black.jpg` (a Corvette) and `premium-front.jpg` (an Audi R8) are still
+unused by any vehicle.

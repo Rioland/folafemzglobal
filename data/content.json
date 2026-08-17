@@ -76,7 +76,7 @@
             "rateNote": null,
             "seats": "7 seats",
             "description": "The default choice for executive movement in Lagos and Abuja. High clearance for bad roads, quiet on the highway, and comfortable enough for a full day of meetings.",
-            "image": "/images/suv-black.jpg",
+            "image": "/images/fleet/toyota-prado-2022.jpg",
             "isFeatured": true,
             "dailyRateMax": null
         },
@@ -92,7 +92,7 @@
             "rateNote": null,
             "seats": "7 seats",
             "description": "A step up from the Prado in cabin finish and ride quality. Popular for hosting visiting directors and for wedding convoys where the car is part of the picture.",
-            "image": "/images/suv-dark-estate.jpg",
+            "image": "/images/fleet/lexus-gx-460.jpg",
             "isFeatured": true,
             "dailyRateMax": 220000
         },
@@ -124,7 +124,7 @@
             "rateNote": null,
             "seats": "5 seats",
             "description": "Double-cab pickup for field teams. Load bed for equipment, and the clearance to reach sites that a saloon cannot.",
-            "image": "/images/suv-black.jpg",
+            "image": "/images/fleet/toyota-hilux.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -220,7 +220,7 @@
             "rateNote": null,
             "seats": "4 seats",
             "description": "Clean, quiet and economical. The sensible pick for airport runs, city meetings and daily staff transport where an SUV is more car than you need.",
-            "image": "/images/sedan-blue.jpg",
+            "image": "/images/fleet/toyota-camry-2014.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -236,7 +236,7 @@
             "rateNote": null,
             "seats": "4 seats",
             "description": "Our entry-level saloon. Same driver standard and same insurance as everything else in the fleet, at the lowest daily rate we offer.",
-            "image": "/images/sedan-silver.jpg",
+            "image": "/images/fleet/toyota-camry-2010.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -348,7 +348,7 @@
             "rateNote": null,
             "seats": "14 seats",
             "description": "The workhorse for staff runs, church trips and airport groups. Fourteen seats, air conditioned, with room for bags on a longer journey.",
-            "image": "/images/bus-hiace.jpg",
+            "image": "/images/fleet/toyota-hiace-bus.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -396,7 +396,7 @@
             "rateNote": null,
             "seats": "7 seats",
             "description": "Top of the standard fleet. Full-size luxury SUV for principals, visiting executives and weddings where the lead car matters.",
-            "image": "/images/suv-white-luxury.jpg",
+            "image": "/images/fleet/lexus-lx-570.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -476,7 +476,7 @@
             "rateNote": "Outside Akure, negotiated per assignment.",
             "seats": null,
             "description": "Trained escort teams and lead vehicles for sensitive movements, cash-in-transit support and VIP protection.",
-            "image": "/images/night-drive.jpg",
+            "image": "/images/fleet/security-escort.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -1119,5 +1119,56 @@
             "unit": "per officer, per day",
             "note": "Outside Akure, negotiated per assignment."
         }
-    }
+    },
+    "gallery": [
+        {
+            "src": "/images/gallery/fleet-lineup.jpg",
+            "caption": "Part of the fleet at the yard in Akure"
+        },
+        {
+            "src": "/images/gallery/prado-pair.jpg",
+            "caption": "Land Cruiser Prados ready for dispatch"
+        },
+        {
+            "src": "/images/gallery/prado-side.jpg",
+            "caption": "Prado, cleaned and checked before a run"
+        },
+        {
+            "src": "/images/gallery/lexus-gx-front.jpg",
+            "caption": "Lexus GX 460"
+        },
+        {
+            "src": "/images/gallery/minibus.jpg",
+            "caption": "Minibus for group and interstate travel"
+        },
+        {
+            "src": "/images/gallery/corolla-rear.jpg",
+            "caption": "Corolla — the everyday saloon"
+        },
+        {
+            "src": "/images/gallery/jetour.jpg",
+            "caption": "Jetour SUV"
+        },
+        {
+            "src": "/images/gallery/granvia.jpg",
+            "caption": "Toyota Granvia"
+        }
+    ],
+    "videos": [
+        {
+            "src": "/video/fleet-drive.mp4",
+            "orientation": "landscape",
+            "caption": "On the road"
+        },
+        {
+            "src": "/video/fleet-walkaround.mp4",
+            "orientation": "portrait",
+            "caption": "Walkaround"
+        },
+        {
+            "src": "/video/fleet-tour.mp4",
+            "orientation": "portrait",
+            "caption": "Fleet tour"
+        }
+    ]
 }

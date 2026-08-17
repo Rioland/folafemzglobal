@@ -1538,3 +1538,69 @@ textarea { min-height: 110px; resize: vertical; }
   .rateEscort { flex-direction: column; align-items: flex-start; }
   .rateEscort__price { text-align: left; }
 }
+
+/* ==========================================================================
+   Yard gallery — the client's own photographs and phone clips
+   ========================================================================== */
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.galleryItem { margin: 0; }
+
+.galleryItem img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--line-dark);
+}
+
+.galleryItem figcaption {
+  margin-top: .5rem;
+  font-size: .8125rem;
+  color: var(--muted);
+}
+
+.galleryVideos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.galleryVideo { margin: 0; }
+
+.galleryVideo video {
+  width: 100%;
+  background: #000;
+  border-radius: var(--radius);
+  border: 1px solid var(--line-dark);
+  display: block;
+}
+
+/* Phone clips keep their real shape rather than being letterboxed. */
+.galleryVideo--wide video { aspect-ratio: 16 / 9; }
+.galleryVideo--tall video { aspect-ratio: 9 / 16; }
+.galleryVideo--wide { grid-column: 1 / -1; }
+
+.galleryVideo figcaption {
+  margin-top: .5rem;
+  font-size: .8125rem;
+  color: var(--muted);
+}
+
+/* Hero video sits exactly where the still did. */
+.hero__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 900px) {
+  .galleryVideos { grid-template-columns: 2fr 1fr 1fr; align-items: start; }
+  .galleryVideo--wide { grid-column: auto; }
+}

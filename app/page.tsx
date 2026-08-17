@@ -9,6 +9,7 @@ import FaqList from '@/components/Faq';
 import { BookButton } from '@/components/BookingModal';
 import { CountUp } from '@/components/SiteChrome';
 import TripRates from '@/components/TripRates';
+import Gallery from '@/components/Gallery';
 
 const SOURCE = 'Homepage';
 
@@ -35,7 +36,17 @@ export default function HomePage() {
       {/* ============================ Hero ============================ */}
       <section className="hero">
         <div className="hero__media">
-          {settings.heroImage && <img src={settings.heroImage} alt="" />}
+          {/* Muted, looping, and only after the poster paints — the still is
+              what the visitor sees first on a slow connection. */}
+          <video
+            src="/video/fleet-drive.mp4"
+            poster={settings.heroImage ?? undefined}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="none"
+          />
         </div>
 
         <div className="shell">
@@ -93,6 +104,9 @@ export default function HomePage() {
 
       {/* ============================ Trip rates ============================ */}
       <TripRates />
+
+      {/* ============================ Gallery ============================ */}
+      <Gallery />
 
       {/* ============================ Services ============================ */}
       <section className="section section--dark">
