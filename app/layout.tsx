@@ -61,6 +61,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
         />
+
+        {/*
+          The entrance styles hide their elements until JavaScript marks them
+          visible. If the script never runs — disabled, blocked, or thrown —
+          that would leave the page blank rather than merely unanimated. Fail
+          to visible instead.
+        */}
+        <noscript>
+          <style>{
+            '.reveal,.stagger>*,[data-animate]{opacity:1!important;transform:none!important}'
+          }</style>
+        </noscript>
       </head>
       <body>
         <BookingProvider>

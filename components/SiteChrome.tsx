@@ -295,18 +295,36 @@ function play(el: Element) {
   el.classList.add('animate__animated', `animate__${name}`);
 }
 
-export function RevealOnScroll() {
-  useEffect(() => {
-    const targets = Array.from(
-      document.querySelectorAll('.reveal, .stagger, [data-animate]')
-    );
+const SELECTOR = '.reveal, .stagger, [data-animate]';
 
+/** Already played — do not re-observe. */
+const shown = (el: Element) =>
+  el.classList.contains('is-visible') || el.classList.contains('animate__animated');
+
+export function RevealOnScroll() {
+  /*
+   * The pathname dependency is load-bearing, not decoration.
+   *
+   * This component is a sibling of {children} in a server layout, so a
+   * client-side navigation swaps the children and leaves this element
+   * untouched — React bails out and the effect never re-runs. Without a
+   * re-run, the incoming page's .reveal elements are never observed and CSS
+   * holds them at opacity 0: the page looks blank until a full reload.
+   *
+   * usePathname subscribes to router context, and context propagates through
+   * that bailout, so this re-renders on every navigation.
+   */
+  const pathname = usePathname();
+
+  useEffect(() => {
     // No observer, or the visitor asked for less motion: show everything at
     // once rather than leaving it stuck at opacity 0.
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (reduced || !('IntersectionObserver' in window)) {
-      targets.forEach((el) => el.classList.add('is-visible', 'animate__animated'));
+      document
+        .querySelectorAll(SELECTOR)
+        .forEach((el) => el.classList.add('is-visible', 'animate__animated'));
       return;
     }
 
@@ -321,9 +339,40 @@ export function RevealOnScroll() {
       { rootMargin: '0px 0px -60px 0px' }
     );
 
-    targets.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  });
+    const watch = (root: ParentNode) => {
+      root.querySelectorAll(SELECTOR).forEach((el) => {
+        if (!shown(el)) observer.observe(el);
+      });
+    };
+
+    watch(document);
+
+    /*
+     * Anything that arrives after this effect — a streamed section, a late
+     * Suspense boundary — would otherwise never be observed and would sit
+     * invisible for the life of the page. Watching <main> rather than <body>
+     * keeps the chat widget's streaming text out of the callback.
+     */
+    const root = document.querySelector('main') ?? document.body;
+
+    const mutations = new MutationObserver((records) => {
+      records.forEach((record) => {
+        record.addedNodes.forEach((node) => {
+          if (node.nodeType !== 1) return;
+          const el = node as Element;
+          if (el.matches(SELECTOR) && !shown(el)) observer.observe(el);
+          watch(el);
+        });
+      });
+    });
+
+    mutations.observe(root, { childList: true, subtree: true });
+
+    return () => {
+      observer.disconnect();
+      mutations.disconnect();
+    };
+  }, [pathname]);
 
   return null;
 }
