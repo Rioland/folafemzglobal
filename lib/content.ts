@@ -14,6 +14,8 @@ export type Vehicle = {
   category: string;
   categorySlug: string;
   dailyRate: number | null;
+  /** Upper bound when a rate is quoted as a band ("60–80k depending on terms"). */
+  dailyRateMax: number | null;
   dailyLabel: string | null;
   secondaryRate: number | null;
   secondaryLabel: string | null;
@@ -76,6 +78,34 @@ export type Post = {
   isFeatured: boolean;
 };
 
+/* --------------------------------------------------------------------------
+   Trip rates
+   --------------------------------------------------------------------------
+   Interstate work is not priced per day. A run to Lagos is quoted as a job:
+   one way, or there and back. The daily rate on a vehicle card is the in-town
+   Akure rate and does not apply to these — which is exactly the confusion this
+   table exists to remove.
+   -------------------------------------------------------------------------- */
+
+export type TripRateRow = {
+  vehicle: string;
+  /** Links the row to a fleet card where one exists; null for classes like "Small car". */
+  vehicleSlug: string | null;
+  oneWay: number;
+  /** Set when the one-way price is a band rather than a figure. */
+  oneWayMax: number | null;
+  returnTrip: number;
+  note: string | null;
+};
+
+export type TripRates = {
+  base: string;
+  destination: string;
+  note: string;
+  rows: TripRateRow[];
+  escort: { label: string; rate: number; unit: string; note: string };
+};
+
 export type Faq = { question: string; answer: string };
 export type Page = { title: string; slug: string; body: string | null; showInFooter: boolean };
 export type Testimonial = {
@@ -105,6 +135,7 @@ type Content = {
   faqs: Faq[];
   pages: Page[];
   testimonials: Testimonial[];
+  tripRates: TripRates;
 };
 
 const content = raw as Content;
@@ -119,6 +150,7 @@ export const posts = content.posts;
 export const faqs = content.faqs;
 export const pages = content.pages;
 export const testimonials = content.testimonials;
+export const tripRates = content.tripRates;
 
 /* --------------------------------------------------------------------------
    Lookups
@@ -188,9 +220,21 @@ export function headline(service: Service, location: Location) {
 
 export const naira = (amount: number) => `NGN${amount.toLocaleString('en-NG')}`;
 
+/** "NGN60,000" or "NGN60,000 – NGN80,000" when the rate is a band. */
 export function priceLabel(vehicle: Vehicle) {
   if (!vehicle.dailyRate) return vehicle.rateNote || 'Contact us';
+  if (vehicle.dailyRateMax && vehicle.dailyRateMax > vehicle.dailyRate) {
+    return `${naira(vehicle.dailyRate)} – ${naira(vehicle.dailyRateMax)}`;
+  }
   return naira(vehicle.dailyRate);
+}
+
+/** Same band handling for a trip's one-way column. */
+export function tripOneWayLabel(row: TripRateRow) {
+  if (row.oneWayMax && row.oneWayMax > row.oneWay) {
+    return `${naira(row.oneWay)} – ${naira(row.oneWayMax)}`;
+  }
+  return naira(row.oneWay);
 }
 
 export function secondaryPriceLabel(vehicle: Vehicle) {

@@ -2,11 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
-  cities, directoryServices, getCity, getPage, locationsInCity, pages, settings, vehicles,
+  cities, directoryServices, getCity, getPage, locationsInCity, pages, settings, tripRates, vehicles,
 } from '@/lib/content';
 import { telHref, whatsappDirect } from '@/lib/enquiry';
 import BookingForm from '@/components/BookingForm';
 import { VehicleCard } from '@/components/FleetGrid';
+import TripRates from '@/components/TripRates';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -151,6 +152,8 @@ function CityPage({ citySlug }: { citySlug: string }) {
           </div>
         </div>
       </section>
+
+      {citySlug === tripRates.base.toLowerCase() && <TripRates />}
 
       <section className="section section--edge">
         <div className="shell">

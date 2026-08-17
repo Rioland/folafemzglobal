@@ -13,7 +13,7 @@
         "addressPrimary": "Lagos — Victoria Island",
         "addressSecondary": "Abuja — Wuse II",
         "businessHours": "Dispatch desk open 24 hours, every day",
-        "heroEyebrow": "Lagos · Abuja · Port Harcourt · Ibadan",
+        "heroEyebrow": "Akure · Lagos · Abuja · Port Harcourt · Ibadan",
         "heroHeading": "Vehicles and drivers you can build a schedule around",
         "heroSubheading": "Chauffeur-driven cars, self-drive hire, airport pickups, interstate travel, moving trucks and security escorts. Quoted in minutes on WhatsApp, delivered to your door.",
         "heroImage": "/images/hero-night-highway.jpg",
@@ -33,8 +33,8 @@
         "statVehicles": "40",
         "statRating": "4.8",
         "metaTitle": "Car Hire Nigeria | Chauffeur, Self Drive, Buses & Moving Trucks",
-        "metaDescription": "Daily, weekly and monthly car hire in Lagos, Abuja, Port Harcourt and Ibadan. SUVs, buses, luxury cars, moving trucks and security escorts, with driver and insurance included.",
-        "metaKeywords": "car hire nigeria, car rental lagos, car rental abuja, chauffeur service lagos, moving truck hire, self drive car rental nigeria, airport pickup lagos",
+        "metaDescription": "Daily, weekly and monthly car hire in Akure, Lagos, Abuja, Port Harcourt and Ibadan. SUVs, buses, luxury cars, moving trucks and security escorts, with driver and insurance included.",
+        "metaKeywords": "car hire akure, car hire nigeria, akure to lagos trip, car rental lagos, car rental abuja, chauffeur service lagos, moving truck hire, self drive car rental nigeria, airport pickup lagos",
         "ogImage": "/images/brand-lockup.jpg",
         "facebookUrl": "",
         "instagramUrl": "",
@@ -69,15 +69,16 @@
             "slug": "toyota-prado-2022",
             "category": "SUVs",
             "categorySlug": "suvs",
-            "dailyRate": 170000,
-            "dailyLabel": "Per day",
+            "dailyRate": 179000,
+            "dailyLabel": "Per day in Akure",
             "secondaryRate": 100000,
             "secondaryLabel": "Airport",
             "rateNote": null,
             "seats": "7 seats",
             "description": "The default choice for executive movement in Lagos and Abuja. High clearance for bad roads, quiet on the highway, and comfortable enough for a full day of meetings.",
             "image": "/images/suv-black.jpg",
-            "isFeatured": true
+            "isFeatured": true,
+            "dailyRateMax": null
         },
         {
             "name": "Lexus GX 460",
@@ -85,14 +86,15 @@
             "category": "SUVs",
             "categorySlug": "suvs",
             "dailyRate": 200000,
-            "dailyLabel": "Per day",
+            "dailyLabel": "Per day in Akure",
             "secondaryRate": 120000,
             "secondaryLabel": "Airport",
             "rateNote": null,
             "seats": "7 seats",
             "description": "A step up from the Prado in cabin finish and ride quality. Popular for hosting visiting directors and for wedding convoys where the car is part of the picture.",
             "image": "/images/suv-dark-estate.jpg",
-            "isFeatured": true
+            "isFeatured": true,
+            "dailyRateMax": 220000
         },
         {
             "name": "Toyota Land Cruiser",
@@ -107,7 +109,8 @@
             "seats": "7 seats",
             "description": "Full-size, heavy and unbothered by long distances or rough surfaces. The vehicle we send for interstate convoys and site visits far outside the city.",
             "image": "/images/suv-white-luxury.jpg",
-            "isFeatured": true
+            "isFeatured": true,
+            "dailyRateMax": null
         },
         {
             "name": "Toyota Hilux",
@@ -122,82 +125,88 @@
             "seats": "5 seats",
             "description": "Double-cab pickup for field teams. Load bed for equipment, and the clearance to reach sites that a saloon cannot.",
             "image": "/images/suv-black.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Toyota RAV4",
             "slug": "toyota-rav4",
             "category": "SUVs",
             "categorySlug": "suvs",
-            "dailyRate": 130000,
+            "dailyRate": null,
             "dailyLabel": "Per day",
             "secondaryRate": null,
             "secondaryLabel": "Airport",
-            "rateNote": null,
+            "rateNote": "Request a quote",
             "seats": "5 seats",
             "description": "Higher clearance than a sedan without the fuel bill of a full SUV. A good middle option when the roads are bad but the trip is short.",
             "image": "/images/fleet/toyota-rav4.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Toyota Highlander",
             "slug": "toyota-highlander",
             "category": "SUVs",
             "categorySlug": "suvs",
-            "dailyRate": 160000,
+            "dailyRate": null,
             "dailyLabel": "Per day",
             "secondaryRate": null,
             "secondaryLabel": "Airport",
-            "rateNote": null,
+            "rateNote": "Request a quote",
             "seats": "7 seats",
             "description": "Seven seats with proper luggage space behind them. Suits family movements and small teams travelling together with bags.",
             "image": "/images/fleet/toyota-highlander.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Toyota Venza",
             "slug": "toyota-venza",
             "category": "SUVs",
             "categorySlug": "suvs",
-            "dailyRate": 140000,
+            "dailyRate": null,
             "dailyLabel": "Per day",
             "secondaryRate": null,
             "secondaryLabel": "Airport",
-            "rateNote": null,
+            "rateNote": "Request a quote",
             "seats": "5 seats",
             "description": "A comfortable, quiet crossover for executive movement where a Prado would be more vehicle than the occasion calls for.",
             "image": "/images/fleet/toyota-venza.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Kia Sportage",
             "slug": "kia-sportage",
             "category": "SUVs",
             "categorySlug": "suvs",
-            "dailyRate": 110000,
+            "dailyRate": null,
             "dailyLabel": "Per day",
             "secondaryRate": null,
             "secondaryLabel": "Airport",
-            "rateNote": null,
+            "rateNote": "Request a quote",
             "seats": "5 seats",
             "description": "Compact SUV for city work. Handles Lagos potholes better than a sedan and stays easy to manoeuvre in tight traffic.",
             "image": "/images/fleet/kia-sportage.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Kia Sorento",
             "slug": "kia-sorento",
             "category": "SUVs",
             "categorySlug": "suvs",
-            "dailyRate": 140000,
+            "dailyRate": null,
             "dailyLabel": "Per day",
             "secondaryRate": null,
             "secondaryLabel": "Airport",
-            "rateNote": null,
+            "rateNote": "Request a quote",
             "seats": "7 seats",
             "description": "Seven-seat SUV for longer runs and interstate trips where passengers need room and the route is not all smooth tarmac.",
             "image": "/images/fleet/kia-sorento.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Toyota Camry 2014",
@@ -212,7 +221,8 @@
             "seats": "4 seats",
             "description": "Clean, quiet and economical. The sensible pick for airport runs, city meetings and daily staff transport where an SUV is more car than you need.",
             "image": "/images/sedan-blue.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Toyota Camry 2010",
@@ -227,67 +237,72 @@
             "seats": "4 seats",
             "description": "Our entry-level saloon. Same driver standard and same insurance as everything else in the fleet, at the lowest daily rate we offer.",
             "image": "/images/sedan-silver.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Toyota Corolla 2020",
             "slug": "toyota-corolla-2020",
             "category": "Sedans",
             "categorySlug": "sedans",
-            "dailyRate": 100000,
-            "dailyLabel": "Per day",
+            "dailyRate": 60000,
+            "dailyLabel": "Per day in Akure",
             "secondaryRate": null,
             "secondaryLabel": "Airport",
-            "rateNote": null,
+            "rateNote": "Final rate depends on the terms agreed.",
             "seats": "4 seats",
             "description": "The workhorse of Nigerian car hire. Cheap on fuel, easy to park in Lagos traffic, and reliable enough for daily staff runs and airport drops.",
             "image": "/images/fleet/toyota-corolla-2020.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": 80000
         },
         {
             "name": "Toyota Corolla 2016",
             "slug": "toyota-corolla-2016",
             "category": "Sedans",
             "categorySlug": "sedans",
-            "dailyRate": 80000,
-            "dailyLabel": "Per day",
+            "dailyRate": 60000,
+            "dailyLabel": "Per day in Akure",
             "secondaryRate": null,
             "secondaryLabel": "Airport",
-            "rateNote": null,
+            "rateNote": "Final rate depends on the terms agreed.",
             "seats": "4 seats",
             "description": "The same car at a lower rate. A sensible pick for longer hires where budget matters more than the model year.",
             "image": "/images/fleet/toyota-corolla-2016.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": 80000
         },
         {
             "name": "Kia Rio",
             "slug": "kia-rio",
             "category": "Sedans",
             "categorySlug": "sedans",
-            "dailyRate": 70000,
-            "dailyLabel": "Per day",
+            "dailyRate": 60000,
+            "dailyLabel": "Per day in Akure",
             "secondaryRate": null,
             "secondaryLabel": "Airport",
-            "rateNote": null,
+            "rateNote": "Final rate depends on the terms agreed.",
             "seats": "4 seats",
             "description": "Compact and economical, best suited to city errands and short airport transfers where a full-size sedan is more car than the job needs.",
             "image": "/images/fleet/kia-rio.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": 80000
         },
         {
             "name": "Kia Optima",
             "slug": "kia-optima",
             "category": "Sedans",
             "categorySlug": "sedans",
-            "dailyRate": 100000,
-            "dailyLabel": "Per day",
+            "dailyRate": 60000,
+            "dailyLabel": "Per day in Akure",
             "secondaryRate": null,
             "secondaryLabel": "Airport",
-            "rateNote": null,
+            "rateNote": "Final rate depends on the terms agreed.",
             "seats": "4 seats",
             "description": "A step up in comfort from the compact sedans, without moving into SUV rates. Comfortable for corporate guests on city routes.",
             "image": "/images/fleet/kia-optima.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": 80000
         },
         {
             "name": "Toyota Sienna 2014",
@@ -302,7 +317,8 @@
             "seats": "7 seats",
             "description": "Family and small-group transport with proper luggage space behind the third row. Sliding doors make it easy in tight compounds and car parks.",
             "image": "/images/bus-hiace.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Toyota Sienna 2006",
@@ -317,7 +333,8 @@
             "seats": "7 seats",
             "description": "The budget seven-seater. Well maintained, air conditioning throughout, and the cheapest way to move a family with luggage.",
             "image": "/images/bus-hiace.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Toyota Hiace Bus",
@@ -332,7 +349,8 @@
             "seats": "14 seats",
             "description": "The workhorse for staff runs, church trips and airport groups. Fourteen seats, air conditioned, with room for bags on a longer journey.",
             "image": "/images/bus-hiace.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Toyota Coaster Bus",
@@ -347,7 +365,8 @@
             "seats": "30 seats",
             "description": "Thirty seats for conferences, corporate away days and large church or school movements. Comes with a driver used to managing a full bus.",
             "image": "/images/interstate-minibus.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Mercedes Sprinter",
@@ -362,7 +381,8 @@
             "seats": "18 seats",
             "description": "High-roof executive shuttle. Stand-up cabin, individual seats and a far quieter ride than a standard bus — used for VIP delegations and hotel transfers.",
             "image": "/images/interstate-minibus.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Lexus LX 570",
@@ -377,7 +397,8 @@
             "seats": "7 seats",
             "description": "Top of the standard fleet. Full-size luxury SUV for principals, visiting executives and weddings where the lead car matters.",
             "image": "/images/suv-white-luxury.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Mercedes G-Class",
@@ -392,7 +413,8 @@
             "seats": "5 seats",
             "description": "Statement vehicle for weddings, photo shoots and events. Limited availability, so book early. Priced per engagement rather than per day.",
             "image": "/images/suv-g-class.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Armoured B6 SUV",
@@ -407,7 +429,8 @@
             "seats": "5 seats",
             "description": "B6-rated armoured vehicle with a security-trained driver. Supplied with documentation and, where required, an escort team. Quoted per assignment after a short brief.",
             "image": "/images/suv-g-class.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Moving Truck",
@@ -422,7 +445,8 @@
             "seats": null,
             "description": "Home and office relocations with a loading crew, wrapping materials and a driver who knows how to get a truck into a Lagos estate.",
             "image": "/images/moving-van.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Interstate Travel",
@@ -437,22 +461,24 @@
             "seats": null,
             "description": "Point-to-point road travel between states with a rested, route-familiar driver. Quoted by route, not by day.",
             "image": "/images/interstate-minibus.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Security Escort",
             "slug": "security-escort",
             "category": "Logistics & Other",
             "categorySlug": "logistics-other",
-            "dailyRate": null,
-            "dailyLabel": "Per day",
+            "dailyRate": 30000,
+            "dailyLabel": "Per officer, per day",
             "secondaryRate": null,
             "secondaryLabel": "Airport",
-            "rateNote": "Request a quote",
+            "rateNote": "Outside Akure, negotiated per assignment.",
             "seats": null,
             "description": "Trained escort teams and lead vehicles for sensitive movements, cash-in-transit support and VIP protection.",
             "image": "/images/night-drive.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         },
         {
             "name": "Self Drive Hire",
@@ -467,10 +493,31 @@
             "seats": null,
             "description": "Drive it yourself. Valid licence, a verification check and a refundable deposit; insurance and papers are handled by us.",
             "image": "/images/interior-console.jpg",
-            "isFeatured": false
+            "isFeatured": false,
+            "dailyRateMax": null
         }
     ],
     "cities": [
+        {
+            "name": "Akure",
+            "slug": "akure",
+            "state": "Ondo State",
+            "tagline": "Our home base — day hire in town and interstate runs from here",
+            "rating": null,
+            "areasSummary": null,
+            "intro": "Akure is where the fleet sits. Day hire around town is quoted per day, and anything leaving the state — Lagos most often — is quoted as a trip rather than a daily rate, because the driver, the fuel and the return leg are the real cost. Ask for the route you actually need and the desk will price it against the table below rather than guessing.",
+            "highlights": [
+                "Day hire in and around Akure",
+                "Interstate runs, Lagos most often",
+                "Police and civil defence escorts arranged",
+                "Return trips priced as one job, not two"
+            ],
+            "officeAddress": null,
+            "airportBranch": null,
+            "heroImage": "/images/night-drive.jpg",
+            "metaTitle": "Car Hire in Akure | Day Rates and Lagos Trips",
+            "metaDescription": "Vehicle hire in Akure, Ondo State. Day rates in town, and fixed trip rates to Lagos for SUVs, buses and saloon cars. Armed escorts available."
+        },
         {
             "name": "Lagos",
             "slug": "lagos",
@@ -1019,5 +1066,58 @@
             "showInFooter": true
         }
     ],
-    "testimonials": []
+    "testimonials": [],
+    "tripRates": {
+        "base": "Akure",
+        "destination": "Lagos",
+        "note": "Trips between Akure and Lagos. Drop-off is one way; return covers the journey there and back.",
+        "rows": [
+            {
+                "vehicle": "Prado SUV",
+                "vehicleSlug": "toyota-prado-2022",
+                "oneWay": 280000,
+                "oneWayMax": null,
+                "returnTrip": 400000,
+                "note": null
+            },
+            {
+                "vehicle": "Hiace Bus 2025",
+                "vehicleSlug": "toyota-hiace-bus",
+                "oneWay": 300000,
+                "oneWayMax": null,
+                "returnTrip": 450000,
+                "note": null
+            },
+            {
+                "vehicle": "Escort Hilux",
+                "vehicleSlug": "toyota-hilux",
+                "oneWay": 250000,
+                "oneWayMax": null,
+                "returnTrip": 400000,
+                "note": null
+            },
+            {
+                "vehicle": "Small car",
+                "vehicleSlug": null,
+                "oneWay": 160000,
+                "oneWayMax": 180000,
+                "returnTrip": 280000,
+                "note": "Saloon cars — Corolla, Rio and similar."
+            },
+            {
+                "vehicle": "Lexus GX 460",
+                "vehicleSlug": "lexus-gx-460",
+                "oneWay": 350000,
+                "oneWayMax": null,
+                "returnTrip": 500000,
+                "note": "Return quoted per day."
+            }
+        ],
+        "escort": {
+            "label": "Police or civil defence armed escort",
+            "rate": 30000,
+            "unit": "per officer, per day",
+            "note": "Outside Akure, negotiated per assignment."
+        }
+    }
 }

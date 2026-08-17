@@ -1,5 +1,5 @@
 import {
-  cities, faqs, locations, naira, services, settings, vehicles,
+  cities, faqs, locations, naira, services, settings, tripOneWayLabel, tripRates, vehicles,
 } from './content';
 
 /* --------------------------------------------------------------------------
@@ -21,16 +21,33 @@ function fleetLines() {
     parts.push(v.seats ? `, ${v.seats})` : ')');
 
     if (v.dailyRate) {
-      parts.push(` — ${naira(v.dailyRate)}${v.dailyLabel ? ` ${v.dailyLabel}` : ' per day'}`);
+      const band = v.dailyRateMax && v.dailyRateMax > v.dailyRate
+        ? `${naira(v.dailyRate)} to ${naira(v.dailyRateMax)}`
+        : naira(v.dailyRate);
+      parts.push(` — ${band}${v.dailyLabel ? ` ${v.dailyLabel.toLowerCase()}` : ' per day'}`);
       if (v.secondaryRate) {
         parts.push(`; ${naira(v.secondaryRate)}${v.secondaryLabel ? ` ${v.secondaryLabel}` : ''}`);
       }
+      if (v.rateNote) parts.push(` (${v.rateNote})`);
     } else {
       parts.push(` — ${v.rateNote || 'price on request'}`);
     }
 
     return parts.join('');
   }).join('\n');
+}
+
+function tripLines() {
+  const { base, destination, rows, escort } = tripRates;
+
+  const table = rows.map((r) => {
+    const bits = [`- ${r.vehicle}: ${tripOneWayLabel(r)} one way (${base} to ${destination}), `
+      + `${naira(r.returnTrip)} for the return trip`];
+    if (r.note) bits.push(` — ${r.note}`);
+    return bits.join('');
+  }).join('\n');
+
+  return `${table}\n\n${escort.label}: ${naira(escort.rate)} ${escort.unit}. ${escort.note}`;
 }
 
 function serviceLines() {
@@ -84,7 +101,20 @@ Hours: ${settings.businessHours}
 
 What the rates include: ${settings.fleetNote}
 
-# Fleet and rates
+# Two different kinds of price — do not mix them up
+
+This is the single easiest thing to get wrong, so read it carefully.
+
+1. A **day rate** is for keeping a vehicle for a day in ${tripRates.base}. That is the figure on each fleet listing below.
+2. A **trip rate** is for a journey between ${tripRates.base} and ${tripRates.destination}. It is a price for the whole job, not per day, and it is quoted two ways: drop-off (one way) or return (there and back).
+
+Never quote a day rate for a trip to ${tripRates.destination}, and never multiply a day rate to estimate a trip. If someone asks about travelling to ${tripRates.destination}, use the trip table. If they ask about a journey to anywhere else, say it is quoted on request — we have no fixed price for it.
+
+# Trip rates (${tripRates.base} to ${tripRates.destination})
+
+${tripLines()}
+
+# Fleet and day rates in ${tripRates.base}
 
 ${fleetLines()}
 

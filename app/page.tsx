@@ -8,6 +8,7 @@ import FleetGrid from '@/components/FleetGrid';
 import FaqList from '@/components/Faq';
 import { BookButton } from '@/components/BookingModal';
 import { CountUp } from '@/components/SiteChrome';
+import TripRates from '@/components/TripRates';
 
 const SOURCE = 'Homepage';
 
@@ -89,6 +90,9 @@ export default function HomePage() {
           <FleetGrid source={SOURCE} />
         </div>
       </section>
+
+      {/* ============================ Trip rates ============================ */}
+      <TripRates />
 
       {/* ============================ Services ============================ */}
       <section className="section section--dark">

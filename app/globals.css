@@ -1435,3 +1435,106 @@ textarea { min-height: 110px; resize: vertical; }
 @media (prefers-reduced-motion: reduce) {
   .askDots i { animation: none !important; opacity: .6; }
 }
+
+/* ==========================================================================
+   Trip rates — Akure to Lagos
+   ========================================================================== */
+
+.rateTable__scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+.rateTable {
+  width: 100%;
+  min-width: 520px;              /* below this the columns collide; scroll instead */
+  border-collapse: collapse;
+  font-size: .9375rem;
+}
+
+.rateTable th,
+.rateTable td {
+  text-align: left;
+  padding: .95rem 1rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.rateTable thead th {
+  font-family: "Roboto Mono", monospace;
+  font-size: .6875rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+  border-bottom: 2px solid var(--amber);
+  white-space: nowrap;
+}
+
+.rateTable thead th span {
+  display: block;
+  letter-spacing: .04em;
+  text-transform: none;
+  color: var(--muted);
+  opacity: .75;
+  margin-top: .2rem;
+}
+
+.rateTable tbody th {
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  color: var(--asphalt);
+}
+
+.rateTable__note {
+  display: block;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  font-size: .8125rem;
+  color: var(--muted);
+  margin-top: .2rem;
+}
+
+.rateTable tbody td {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  color: var(--green);
+  white-space: nowrap;
+}
+
+.rateTable tbody tr:hover { background: var(--green-tint); }
+
+.rateEscort {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1.125rem 1.25rem;
+  background: var(--asphalt);
+  color: var(--white);
+  border-left: 4px solid var(--amber);
+  border-radius: var(--radius);
+}
+
+.rateEscort strong { display: block; font-family: "Archivo", sans-serif; font-size: 1rem; }
+.rateEscort span { display: block; font-size: .8125rem; color: var(--muted); margin-top: .15rem; }
+
+.rateEscort__price {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--amber);
+  text-align: right;
+}
+.rateEscort__price span { color: var(--muted); font-weight: 400; font-size: .75rem; }
+
+.rateTable__foot {
+  margin-top: 1rem;
+  font-size: .8125rem;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+@media (max-width: 560px) {
+  .rateEscort { flex-direction: column; align-items: flex-start; }
+  .rateEscort__price { text-align: left; }
+}
