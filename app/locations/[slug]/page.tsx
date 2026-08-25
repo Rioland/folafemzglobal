@@ -8,6 +8,7 @@ import {
 import { telHref, whatsappDirect } from '@/lib/enquiry';
 import BookingForm from '@/components/BookingForm';
 import { VehicleCard } from '@/components/FleetGrid';
+import { JsonLd, breadcrumbSchema } from '@/lib/seo';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -51,6 +52,13 @@ export default async function LocationServicePage({ params }: Props) {
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: 'Locations', path: '/location-directory/' },
+        ...(city ? [{ name: city.name, path: `/car-rental-${city.slug}/` }] : []),
+        { name: headline(service, location), path: `/locations/${slug}/` },
+      ])} />
+
       <section className="pageHead">
         <div className="shell">
           <nav className="crumbs">

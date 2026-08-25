@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { JsonLd, breadcrumbSchema } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 import { getPost, posts } from '@/lib/content';
 
@@ -65,10 +66,16 @@ export default async function ArticlePage({ params }: Props) {
         </div>
       </section>
 
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: 'Blog', path: '/blog/' },
+        { name: post.title, path: `/articles/${post.slug}/` },
+      ])} />
+
       <article className="section">
         <div className="shell shell--narrow">
           {post.coverImage && (
-            <img className="articleCover" src={post.coverImage} alt="" />
+            <img className="articleCover" src={post.coverImage} alt={post.title} />
           )}
           {post.body && <div className="prose" dangerouslySetInnerHTML={{ __html: post.body }} />}
         </div>
@@ -81,7 +88,7 @@ export default async function ArticlePage({ params }: Props) {
             {others.map((p) => (
               <Link className="postCard" key={p.slug} href={`/articles/${p.slug}/`}>
                 {p.coverImage && (
-                  <div className="postCard__media"><img src={p.coverImage} alt="" loading="lazy" /></div>
+                  <div className="postCard__media"><img src={p.coverImage} alt={p.title} loading="lazy" /></div>
                 )}
                 <div className="postCard__body">
                   <div className="postCard__cat">{p.category}</div>

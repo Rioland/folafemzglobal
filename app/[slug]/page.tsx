@@ -8,6 +8,7 @@ import { telHref, whatsappDirect } from '@/lib/enquiry';
 import BookingForm from '@/components/BookingForm';
 import { VehicleCard } from '@/components/FleetGrid';
 import TripRates from '@/components/TripRates';
+import { JsonLd, breadcrumbSchema } from '@/lib/seo';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -84,9 +85,14 @@ function CityPage({ citySlug }: { citySlug: string }) {
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: `Car hire in ${city.name}`, path: `/car-rental-${city.slug}/` },
+      ])} />
+
       <section className="pageHead pageHead--image">
         {city.heroImage && (
-          <div className="pageHead__media"><img src={city.heroImage} alt="" /></div>
+          <div className="pageHead__media"><img src={city.heroImage} alt={`Car hire in ${city.name}, ${city.state ?? 'Nigeria'}`} /></div>
         )}
         <div className="shell">
           <nav className="crumbs"><Link href="/">Home</Link> / {city.name}</nav>

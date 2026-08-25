@@ -9,6 +9,7 @@ import type { Metadata } from 'next';
 import 'animate.css';
 import './globals.css';
 import { settings } from '@/lib/content';
+import { JsonLd, businessSchema } from '@/lib/seo';
 import { BookingProvider } from '@/components/BookingModal';
 import { Footer, FloatingActions, Header, RevealOnScroll } from '@/components/SiteChrome';
 import AskAi from '@/components/AskAi';
@@ -34,20 +35,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // Only claim a rating when real reviews back it — same rule as the Laravel build.
-  const businessSchema: Record<string, unknown> = {
-    '@context': 'https://schema.org',
-    '@type': 'AutoRental',
-    name: settings.siteName,
-    description: settings.metaDescription,
-    telephone: settings.phone,
-    email: settings.email,
-    url: SITE_URL,
-    address: [settings.addressPrimary, settings.addressSecondary]
-      .filter(Boolean)
-      .map((a) => ({ '@type': 'PostalAddress', streetAddress: a, addressCountry: 'NG' })),
-  };
-
   return (
     <html lang="en">
       <head>
@@ -57,10 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600&family=Roboto+Mono:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
-        />
+        <JsonLd data={businessSchema()} />
 
         {/*
           The entrance styles hide their elements until JavaScript marks them

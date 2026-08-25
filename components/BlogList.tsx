@@ -47,7 +47,7 @@ export default function BlogList() {
           {shown.map((p) => (
             <Link className="postCard" key={p.slug} href={`/articles/${p.slug}/`}>
               {p.coverImage && (
-                <div className="postCard__media"><img src={p.coverImage} alt="" loading="lazy" /></div>
+                <div className="postCard__media"><img src={p.coverImage} alt={p.title} loading="lazy" /></div>
               )}
               <div className="postCard__body">
                 <div className="postCard__cat">{p.category}</div>

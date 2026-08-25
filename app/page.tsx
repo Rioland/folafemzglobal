@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
   cities, faqs, landingServices, posts, settings, testimonials, vehicles,
@@ -8,10 +9,13 @@ import FleetGrid from '@/components/FleetGrid';
 import FaqList from '@/components/Faq';
 import { BookButton } from '@/components/BookingModal';
 import { CountUp } from '@/components/SiteChrome';
+import { JsonLd, fleetSchema, tripSchema } from '@/lib/seo';
 import TripRates from '@/components/TripRates';
 import Gallery from '@/components/Gallery';
 
 const SOURCE = 'Homepage';
+
+export const metadata: Metadata = { alternates: { canonical: '/' } };
 
 export default function HomePage() {
   const featured = posts.slice(0, 3);
@@ -32,6 +36,8 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <JsonLd data={fleetSchema()} />
+      <JsonLd data={tripSchema()} />
 
       {/* ============================ Hero ============================ */}
       <section className="hero">
@@ -147,7 +153,7 @@ export default function HomePage() {
             </div>
 
             <div className="reveal reveal--right">
-              <img className="aboutImage" src="/images/chauffeur-service.jpg" alt="" loading="lazy" />
+              <img className="aboutImage" src="/images/chauffeur-service.jpg" alt="Chauffeur-driven car hire with Folafemz Global" loading="lazy" />
             </div>
           </div>
         </div>
@@ -180,7 +186,7 @@ export default function HomePage() {
               <article className="cityCard" key={city.slug}>
                 {city.heroImage && (
                   <div className="cityCard__media">
-                    <img src={city.heroImage} alt="" loading="lazy" />
+                    <img src={city.heroImage} alt={`Car hire in ${city.name}`} loading="lazy" />
                   </div>
                 )}
                 <div className="cityCard__body">
@@ -269,7 +275,7 @@ export default function HomePage() {
               <Link className="postCard" key={post.slug} href={`/articles/${post.slug}/`}>
                 {post.coverImage && (
                   <div className="postCard__media">
-                    <img src={post.coverImage} alt="" loading="lazy" />
+                    <img src={post.coverImage} alt={post.title} loading="lazy" />
                   </div>
                 )}
                 <div className="postCard__body">

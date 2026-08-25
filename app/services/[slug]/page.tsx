@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getService, landingServices, locations, settings } from '@/lib/content';
 import { whatsappDirect } from '@/lib/enquiry';
 import BookingForm from '@/components/BookingForm';
+import { JsonLd, breadcrumbSchema } from '@/lib/seo';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -51,12 +52,17 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </section>
 
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: service.name, path: `/services/${service.slug}/` },
+      ])} />
+
       <section className="section">
         <div className="shell">
           <div className="split">
             <div className="reveal reveal--left">
               {service.image && (
-                <img className="aboutImage" src={service.image} alt="" loading="lazy" />
+                <img className="aboutImage" src={service.image} alt={`${service.name} in Nigeria`} loading="lazy" />
               )}
               {service.body && (
                 <div className="prose" dangerouslySetInnerHTML={{ __html: service.body }} />
