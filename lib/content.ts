@@ -125,6 +125,7 @@ export type Settings = {
   statYears: string; statClients: string; statVehicles: string; statRating: string;
   metaTitle: string; metaDescription: string; metaKeywords: string; ogImage: string | null;
   facebookUrl: string; instagramUrl: string; twitterUrl: string; tiktokUrl: string;
+  youtubeUrl: string; linkedinUrl: string;
 };
 
 type Content = {

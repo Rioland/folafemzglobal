@@ -172,11 +172,15 @@ export function Header() {
 
 export function Footer() {
   const year = new Date().getFullYear();
+  // Each entry appears only once its address is set in the dashboard, so an
+  // account the business does not have simply never shows up.
   const socials = [
     ['Facebook', settings.facebookUrl],
     ['Instagram', settings.instagramUrl],
     ['X', settings.twitterUrl],
     ['TikTok', settings.tiktokUrl],
+    ['YouTube', settings.youtubeUrl],
+    ['LinkedIn', settings.linkedinUrl],
   ].filter(([, url]) => url) as [string, string][];
 
   return (
