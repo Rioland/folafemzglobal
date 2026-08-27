@@ -121,6 +121,7 @@ export type Settings = {
   phone: string; phoneAlt: string[]; whatsapp: string; email: string;
   addressPrimary: string; addressSecondary: string; businessHours: string;
   heroEyebrow: string; heroHeading: string; heroSubheading: string; heroImage: string | null;
+  heroVideo: string | null; aboutImage: string | null;
   fleetNote: string; aboutHeading: string; aboutBody: string; trustPoints: string[];
   statYears: string; statClients: string; statVehicles: string; statRating: string;
   metaTitle: string; metaDescription: string; metaKeywords: string; ogImage: string | null;

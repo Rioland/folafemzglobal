@@ -45,7 +45,7 @@ export default function HomePage() {
           {/* Muted, looping, and only after the poster paints — the still is
               what the visitor sees first on a slow connection. */}
           <video
-            src="/video/fleet-drive.mp4"
+            src={settings.heroVideo ?? undefined}
             poster={settings.heroImage ?? undefined}
             autoPlay
             muted
@@ -153,7 +153,9 @@ export default function HomePage() {
             </div>
 
             <div className="reveal reveal--right">
-              <img className="aboutImage" src="/images/chauffeur-service.jpg" alt="Chauffeur-driven car hire with Folafemz Global" loading="lazy" />
+              {settings.aboutImage && (
+                <img className="aboutImage" src={settings.aboutImage} alt="Chauffeur-driven car hire with Folafemz Global" loading="lazy" />
+              )}
             </div>
           </div>
         </div>
