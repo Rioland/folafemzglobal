@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
+    "sync": "node scripts/sync-content.mjs",
+    "prebuild": "node scripts/sync-content.mjs",
     "build": "next build",
     "start": "next start",
     "export": "next build"
@@ -11,6 +13,7 @@
   "dependencies": {
     "@ai-sdk/cerebras": "^3.0.30",
     "@ai-sdk/google": "^4.0.44",
+    "@supabase/supabase-js": "^2.48.1",
     "ai": "^7.0.66",
     "animate.css": "^4.1.1",
     "next": "^16.3.1",

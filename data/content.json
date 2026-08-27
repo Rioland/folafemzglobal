@@ -1,7 +1,6 @@
 {
     "settings": {
         "siteName": "Folafemz Global NIG LTD",
-        "tagline": "Chauffeur-driven cars, buses and logistics across Nigeria",
         "logo": "/images/brand-mark.jpg",
         "phone": "0703 375 8671",
         "phoneAlt": [
@@ -39,7 +38,8 @@
         "facebookUrl": "",
         "instagramUrl": "",
         "twitterUrl": "",
-        "tiktokUrl": ""
+        "tiktokUrl": "",
+        "tagline": "Chauffeur-driven cars, buses and logistics across Nigeria"
     },
     "categories": [
         {
@@ -958,7 +958,7 @@
             "coverImage": "/images/sedan-blue.jpg",
             "readMinutes": 8,
             "author": "Editorial desk",
-            "publishedAt": "2026-08-14 05:54:39",
+            "publishedAt": "2026-08-14T05:54:39+00:00",
             "isFeatured": true
         },
         {
@@ -970,7 +970,7 @@
             "coverImage": "/images/suv-black.jpg",
             "readMinutes": 6,
             "author": "Editorial desk",
-            "publishedAt": "2026-08-03 05:54:39",
+            "publishedAt": "2026-08-03T05:54:39+00:00",
             "isFeatured": false
         },
         {
@@ -982,7 +982,7 @@
             "coverImage": "/images/suv-g-class.jpg",
             "readMinutes": 7,
             "author": "Editorial desk",
-            "publishedAt": "2026-07-23 05:54:39",
+            "publishedAt": "2026-07-23T05:54:39+00:00",
             "isFeatured": false
         },
         {
@@ -994,7 +994,7 @@
             "coverImage": "/images/moving-van.jpg",
             "readMinutes": 7,
             "author": "Editorial desk",
-            "publishedAt": "2026-07-12 05:54:39",
+            "publishedAt": "2026-07-12T05:54:39+00:00",
             "isFeatured": false
         },
         {
@@ -1006,7 +1006,7 @@
             "coverImage": "/images/interior-console.jpg",
             "readMinutes": 6,
             "author": "Editorial desk",
-            "publishedAt": "2026-07-01 05:54:39",
+            "publishedAt": "2026-07-01T05:54:39+00:00",
             "isFeatured": false
         }
     ],
