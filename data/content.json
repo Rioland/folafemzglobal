@@ -13,8 +13,6 @@
         "businessHours": "Dispatch desk open 24 hours, every day",
         "heroEyebrow": "Akure · Lagos · Abuja · Port Harcourt · Ibadan",
         "heroHeading": "Vehicles and drivers you can build a schedule around",
-        "heroSubheading": "Chauffeur-driven cars, self-drive hire, airport pickups, interstate travel, moving trucks and security escorts. Quoted in minutes on WhatsApp, delivered to your door.",
-        "fleetNote": "Rates shown are per day within Lagos and Abuja, and include the driver, fuel inside the city and insurance. Other cities, interstate routes, self-drive and moving trucks are quoted on request.",
         "aboutHeading": "Built for people who cannot afford to be late",
         "aboutBody": "Most hire problems are not car problems. They are dispatch problems: nobody answers, the driver leaves late, the vehicle turns up dirty. We run a maintained fleet, vetted drivers who know their routes, and a desk that picks up. Corporate accounts, weddings, airport runs and long-term leases all run to the same standard.",
         "trustPoints": [
@@ -29,9 +27,6 @@
         "statClients": "1,500",
         "statVehicles": "40",
         "statRating": "4.8",
-        "metaTitle": "Car Hire Nigeria | Chauffeur, Self Drive, Buses & Moving Trucks",
-        "metaDescription": "Daily, weekly and monthly car hire in Akure, Lagos, Abuja, Port Harcourt and Ibadan. SUVs, buses, luxury cars, moving trucks and security escorts, with driver and insurance included.",
-        "metaKeywords": "car hire akure, car hire nigeria, akure to lagos trip, car rental lagos, car rental abuja, chauffeur service lagos, moving truck hire, self drive car rental nigeria, airport pickup lagos",
         "twitterUrl": "",
         "tiktokUrl": "",
         "tagline": "Chauffeur-driven cars, buses and logistics across Nigeria",
@@ -43,7 +38,12 @@
         "heroImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/hero-night-highway.jpg",
         "ogImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/brand-lockup.jpg",
         "heroVideo": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/video/fleet-drive.mp4",
-        "aboutImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/chauffeur-service.jpg"
+        "aboutImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/chauffeur-service.jpg",
+        "heroSubheading": "Chauffeur-driven cars, self-drive hire, airport pickups, interstate travel and security escorts. Quoted in minutes on WhatsApp, delivered to your door.",
+        "fleetNote": "Rates shown are per day within Lagos and Abuja, and include the driver, fuel inside the city and insurance. Other cities, interstate routes and self-drive are quoted on request.",
+        "metaTitle": "Car Hire Nigeria | Chauffeur, Self Drive & Buses",
+        "metaDescription": "Daily, weekly and monthly car hire in Akure, Lagos, Abuja, Port Harcourt and Ibadan. SUVs, buses, luxury cars and security escorts, with driver and insurance included.",
+        "metaKeywords": "car hire akure, car hire nigeria, akure to lagos trip, car rental lagos, car rental abuja, chauffeur service lagos, self drive car rental nigeria, airport pickup lagos"
     },
     "categories": [
         {
@@ -437,22 +437,6 @@
             "dailyRateMax": null
         },
         {
-            "name": "Moving Truck",
-            "slug": "moving-truck",
-            "category": "Logistics & Other",
-            "categorySlug": "logistics-other",
-            "dailyRate": null,
-            "dailyLabel": "Per day",
-            "secondaryRate": null,
-            "secondaryLabel": "Airport",
-            "rateNote": "Request a quote",
-            "seats": null,
-            "description": "Home and office relocations with a loading crew, wrapping materials and a driver who knows how to get a truck into a Lagos estate.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/moving-van.jpg",
-            "isFeatured": false,
-            "dailyRateMax": null
-        },
-        {
             "name": "Interstate Travel",
             "slug": "interstate-travel",
             "category": "Logistics & Other",
@@ -534,14 +518,13 @@
                 "Corporate fleet management and monthly contracts",
                 "Island to mainland commuting with fixed pricing",
                 "Wedding cars and decorated convoys",
-                "Airport transfers with flight tracking",
-                "Moving trucks with a loading crew"
+                "Airport transfers with flight tracking"
             ],
             "officeAddress": "Victoria Island, Lagos",
             "airportBranch": "Murtala Muhammed International Airport",
             "heroImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/chauffeur-service.jpg",
             "metaTitle": "Car Hire in Lagos | Chauffeur, Self Drive & Bus Rental",
-            "metaDescription": "Rent a car with a driver in Lagos. SUVs, saloons, buses and moving trucks, with insurance and fuel inside the city included. Quoted on WhatsApp in minutes."
+            "metaDescription": "Rent a car with a driver in Lagos. SUVs, saloons and buses, with insurance and fuel inside the city included. Quoted on WhatsApp in minutes."
         },
         {
             "name": "Abuja",
@@ -562,7 +545,7 @@
             "airportBranch": "Nnamdi Azikiwe International Airport",
             "heroImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/suv-white-luxury.jpg",
             "metaTitle": "Car Hire in Abuja | Chauffeur, Self Drive & Bus Rental",
-            "metaDescription": "Rent a car with a driver in Abuja. SUVs, saloons, buses and moving trucks, with insurance and fuel inside the city included. Quoted on WhatsApp in minutes."
+            "metaDescription": "Rent a car with a driver in Abuja. SUVs, saloons and buses, with insurance and fuel inside the city included. Quoted on WhatsApp in minutes."
         },
         {
             "name": "Port Harcourt",
@@ -583,7 +566,7 @@
             "airportBranch": "Port Harcourt International Airport",
             "heroImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/night-drive.jpg",
             "metaTitle": "Car Hire in Port Harcourt | Chauffeur, Self Drive & Bus Rental",
-            "metaDescription": "Rent a car with a driver in Port Harcourt. SUVs, saloons, buses and moving trucks, with insurance and fuel inside the city included. Quoted on WhatsApp in minutes."
+            "metaDescription": "Rent a car with a driver in Port Harcourt. SUVs, saloons and buses, with insurance and fuel inside the city included. Quoted on WhatsApp in minutes."
         },
         {
             "name": "Ibadan",
@@ -603,7 +586,7 @@
             "airportBranch": "Ibadan Airport",
             "heroImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/sedan-blue.jpg",
             "metaTitle": "Car Hire in Ibadan | Chauffeur, Self Drive & Bus Rental",
-            "metaDescription": "Rent a car with a driver in Ibadan. SUVs, saloons, buses and moving trucks, with insurance and fuel inside the city included. Quoted on WhatsApp in minutes."
+            "metaDescription": "Rent a car with a driver in Ibadan. SUVs, saloons and buses, with insurance and fuel inside the city included. Quoted on WhatsApp in minutes."
         }
     ],
     "locations": [
@@ -841,17 +824,6 @@
         }
     ],
     "services": [
-        {
-            "name": "Moving Truck",
-            "slug": "moving-truck",
-            "linkLabel": "Hire Moving Truck",
-            "headlineTemplate": "{service} in {location}, {city}",
-            "summary": "Home moves, office relocations and furniture transport with a loading crew and wrapping materials included.",
-            "body": "<p>A move goes wrong in the gaps: the truck arrives without wrapping, nobody thought about the estate gate closing at 8pm, the lift is booked for the wrong day. We quote the whole job rather than the vehicle.</p> <h3>What comes with the truck</h3> <ul><li>A loading crew sized to the job, not one driver and an apprentice</li><li>Wrapping material, blankets and straps for furniture and appliances</li><li>A driver used to getting a truck through estate gates and narrow compounds</li><li>Loading, transport, offloading and rough placement in the new space</li></ul> <h3>Before you book</h3> <p>Tell us the number of rooms, the floor you are on at both ends, and whether either building has a working lift. Those three facts move a quote more than distance does. For office moves, tell us whether the IT equipment is being handled by your own team.</p> <h3>Timing</h3> <p>Weekend moves book out first, particularly at month end. A weekday move is usually cheaper and always faster, because you are not competing for the lift or the gate.</p>",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/moving-van.jpg",
-            "showInDirectory": true,
-            "hasLandingPage": true
-        },
         {
             "name": "Airport Transfer",
             "slug": "airport-transfer",
