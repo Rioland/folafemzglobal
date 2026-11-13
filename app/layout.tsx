@@ -2,11 +2,6 @@ import { SITE_URL } from '@/lib/site';
 
 import type { Metadata } from 'next';
 
-// Animate.css first, globals.css second: the reduced-motion block at the end of
-// globals.css uses !important, so importing it last lets it win over the
-// library's own. v4 namespaces every class as animate__*, so nothing here
-// collides with the hand-written motion system.
-import 'animate.css';
 import './globals.css';
 import { settings } from '@/lib/content';
 import { JsonLd, businessSchema } from '@/lib/seo';
@@ -41,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600&family=Roboto+Mono:wght@400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@1&family=Source+Sans+3:wght@400;600&display=swap"
           rel="stylesheet"
         />
         <JsonLd data={businessSchema()} />
@@ -54,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         */}
         <noscript>
           <style>{
-            '.reveal,.stagger>*,[data-animate]{opacity:1!important;transform:none!important}'
+            '.reveal,.stagger>*{opacity:1!important;transform:none!important}'
           }</style>
         </noscript>
       </head>

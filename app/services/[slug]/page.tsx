@@ -85,7 +85,7 @@ export default async function ServicePage({ params }: Props) {
       <section className="section section--dark section--tight">
         <div className="shell">
           <div className="eyebrow">{service.name} by area</div>
-          <div className="chipRow" data-animate="fadeInUp">
+          <div className="chipRow reveal">
             {locations.map((l) => (
               <Link className="chip" key={l.slug} href={`/locations/${service.slug}-${l.slug}/`}>
                 {l.name}

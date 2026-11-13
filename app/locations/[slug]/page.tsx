@@ -122,7 +122,7 @@ export default async function LocationServicePage({ params }: Props) {
       <section className="section section--dark section--tight">
         <div className="shell">
           <div className="eyebrow">Also in {location.name}</div>
-          <div className="chipRow" data-animate="fadeInUp">
+          <div className="chipRow reveal">
             {related.map((s) => (
               <Link className="chip" key={s.slug} href={`/locations/${s.slug}-${location.slug}/`}>
                 {s.name}
