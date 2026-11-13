@@ -13,7 +13,6 @@ import { BookButton } from './BookingModal';
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [progress, setProgress] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
 
@@ -21,9 +20,6 @@ export function Header() {
     const onScroll = () => {
       const y = window.scrollY;
       setScrolled(y > 12);
-
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      setProgress(max > 0 ? y / max : 0);
     };
 
     onScroll();
@@ -94,7 +90,7 @@ export function Header() {
 
             <div className="nav__group" data-dropdown data-open={openMenu === 'services'}>
               <button className="nav__toggle" onClick={toggle('services')} aria-expanded={openMenu === 'services'}>
-                Services ▾
+                Services
               </button>
               <div className="nav__menu">
                 {landingServices.map((s) => (
@@ -107,7 +103,7 @@ export function Header() {
 
             <div className="nav__group" data-dropdown data-open={openMenu === 'cities'}>
               <button className="nav__toggle" onClick={toggle('cities')} aria-expanded={openMenu === 'cities'}>
-                Cities ▾
+                Cities
               </button>
               <div className="nav__menu">
                 {cities.map((c) => (
@@ -160,8 +156,6 @@ export function Header() {
           </a>
         </div>
       </div>
-
-      <div className="progress" style={{ ['--progress' as string]: progress }} />
     </header>
   );
 }
@@ -254,7 +248,8 @@ export function FloatingActions() {
   return (
     <>
       <a className="floatChat" href={whatsappDirect()} target="_blank" rel="noopener">
-        ✆ <span>WhatsApp us</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4 5.3 5.3 0 0 0 3.2.7 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+        <span>WhatsApp us</span>
       </a>
       <button
         className={`toTop${showTop ? ' is-visible' : ''}`}
@@ -271,39 +266,14 @@ export function FloatingActions() {
  * Drives every scroll entrance on the site. Re-runs on route change so
  * client-navigated pages animate too.
  *
- * Two vocabularies, both handled here:
- *
- *   .reveal / .stagger      the hand-written system in globals.css — gets
- *                           .is-visible and transitions to its resting state.
- *   data-animate="fadeInUp" any Animate.css animation, applied at the moment
- *                           the element enters the viewport.
- *
- * The second exists because Animate.css runs on page load, not on scroll: a
- * class written straight into the markup plays through while the element is
- * still below the fold and is over before anyone sees it. Applying it here is
- * what makes the library usable outside the first screen.
- *
- * `data-animate-delay="200"` adds a delay in milliseconds.
+ * An element carrying .reveal or .stagger is held invisible by the stylesheet
+ * until it enters the viewport, at which point it gets .is-visible and fades
+ * to its resting state. Each element plays once.
  */
-function play(el: Element) {
-  const name = el.getAttribute('data-animate');
-
-  if (!name) {
-    el.classList.add('is-visible');
-    return;
-  }
-
-  const delay = el.getAttribute('data-animate-delay');
-  if (delay) (el as HTMLElement).style.animationDelay = `${delay}ms`;
-
-  el.classList.add('animate__animated', `animate__${name}`);
-}
-
-const SELECTOR = '.reveal, .stagger, [data-animate]';
+const SELECTOR = '.reveal, .stagger';
 
 /** Already played — do not re-observe. */
-const shown = (el: Element) =>
-  el.classList.contains('is-visible') || el.classList.contains('animate__animated');
+const shown = (el: Element) => el.classList.contains('is-visible');
 
 export function RevealOnScroll() {
   /*
@@ -328,7 +298,7 @@ export function RevealOnScroll() {
     if (reduced || !('IntersectionObserver' in window)) {
       document
         .querySelectorAll(SELECTOR)
-        .forEach((el) => el.classList.add('is-visible', 'animate__animated'));
+        .forEach((el) => el.classList.add('is-visible'));
       return;
     }
 
@@ -336,7 +306,7 @@ export function RevealOnScroll() {
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          play(entry.target);
+          entry.target.classList.add('is-visible');
           observer.unobserve(entry.target);
         });
       },

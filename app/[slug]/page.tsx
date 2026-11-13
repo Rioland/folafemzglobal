@@ -180,7 +180,7 @@ function CityPage({ citySlug }: { citySlug: string }) {
           <div className="shell">
             <div className="eyebrow">Areas we deliver to</div>
             <h2>{city.name} coverage</h2>
-            <div className="chipRow" data-animate="fadeInUp">
+            <div className="chipRow reveal">
               {areas.map((a) => (
                 <Link className="chip" key={a.slug} href={`/locations/${directoryServices[0].slug}-${a.slug}/`}>
                   {a.name}

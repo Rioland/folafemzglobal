@@ -34,11 +34,11 @@
         "linkedinUrl": "",
         "facebookUrl": "",
         "instagramUrl": "",
-        "logo": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/brand-mark.jpg",
-        "heroImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/hero-night-highway.jpg",
-        "ogImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/brand-lockup.jpg",
-        "heroVideo": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/video/fleet-drive.mp4",
-        "aboutImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/chauffeur-service.jpg",
+        "logo": "/images/brand-mark.jpg",
+        "heroImage": "/images/hero-night-highway.jpg",
+        "ogImage": "/images/brand-lockup.jpg",
+        "heroVideo": "/video/fleet-drive.mp4",
+        "aboutImage": "/images/chauffeur-service.jpg",
         "heroSubheading": "Chauffeur-driven cars, self-drive hire, airport pickups, interstate travel and security escorts. Quoted in minutes on WhatsApp, delivered to your door.",
         "fleetNote": "Rates shown are per day within Lagos and Abuja, and include the driver, fuel inside the city and insurance. Other cities, interstate routes and self-drive are quoted on request.",
         "metaTitle": "Car Hire Nigeria | Chauffeur, Self Drive & Buses",
@@ -80,7 +80,7 @@
             "rateNote": null,
             "seats": "6 seats",
             "description": "The default choice for executive movement in Lagos and Abuja. High clearance for bad roads, quiet on the highway, and comfortable enough for a full day of meetings.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/toyota-prado-2022.jpg",
+            "image": "/images/fleet/toyota-prado-2022.jpg",
             "isFeatured": true,
             "dailyRateMax": null
         },
@@ -96,7 +96,7 @@
             "rateNote": null,
             "seats": "6 seats",
             "description": "A step up from the Prado in cabin finish and ride quality. Popular for hosting visiting directors and for wedding convoys where the car is part of the picture.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/lexus-gx-460.jpg",
+            "image": "/images/fleet/lexus-gx-460.jpg",
             "isFeatured": true,
             "dailyRateMax": 220000
         },
@@ -112,7 +112,7 @@
             "rateNote": null,
             "seats": "6 seats",
             "description": "Full-size, heavy and unbothered by long distances or rough surfaces. The vehicle we send for interstate convoys and site visits far outside the city.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/suv-white-luxury.jpg",
+            "image": "/images/suv-white-luxury.jpg",
             "isFeatured": true,
             "dailyRateMax": null
         },
@@ -128,7 +128,7 @@
             "rateNote": null,
             "seats": "4 seats",
             "description": "Double-cab pickup for field teams. Load bed for equipment, and the clearance to reach sites that a saloon cannot.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/toyota-hilux.jpg",
+            "image": "/images/fleet/toyota-hilux.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -144,7 +144,7 @@
             "rateNote": "Request a quote",
             "seats": "4 seats",
             "description": "Higher clearance than a sedan without the fuel bill of a full SUV. A good middle option when the roads are bad but the trip is short.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/toyota-rav4.jpg",
+            "image": "/images/fleet/toyota-rav4.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -160,7 +160,7 @@
             "rateNote": "Request a quote",
             "seats": "6 seats",
             "description": "Seven seats with proper luggage space behind them. Suits family movements and small teams travelling together with bags.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/toyota-highlander.jpg",
+            "image": "/images/fleet/toyota-highlander.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -176,7 +176,7 @@
             "rateNote": "Request a quote",
             "seats": "4 seats",
             "description": "A comfortable, quiet crossover for executive movement where a Prado would be more vehicle than the occasion calls for.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/toyota-venza.jpg",
+            "image": "/images/fleet/toyota-venza.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -192,7 +192,7 @@
             "rateNote": "Request a quote",
             "seats": "4 seats",
             "description": "Compact SUV for city work. Handles Lagos potholes better than a sedan and stays easy to manoeuvre in tight traffic.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/kia-sportage.jpg",
+            "image": "/images/fleet/kia-sportage.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -208,7 +208,7 @@
             "rateNote": "Request a quote",
             "seats": "6 seats",
             "description": "Seven-seat SUV for longer runs and interstate trips where passengers need room and the route is not all smooth tarmac.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/kia-sorento.jpg",
+            "image": "/images/fleet/kia-sorento.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -224,7 +224,7 @@
             "rateNote": null,
             "seats": "4 seats",
             "description": "Clean, quiet and economical. The sensible pick for airport runs, city meetings and daily staff transport where an SUV is more car than you need.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/toyota-camry-2014.jpg",
+            "image": "/images/fleet/toyota-camry-2014.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -240,7 +240,7 @@
             "rateNote": null,
             "seats": "4 seats",
             "description": "Our entry-level saloon. Same driver standard and same insurance as everything else in the fleet, at the lowest daily rate we offer.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/toyota-camry-2010.jpg",
+            "image": "/images/fleet/toyota-camry-2010.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -256,7 +256,7 @@
             "rateNote": "Final rate depends on the terms agreed.",
             "seats": "4 seats",
             "description": "The workhorse of Nigerian car hire. Cheap on fuel, easy to park in Lagos traffic, and reliable enough for daily staff runs and airport drops.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/toyota-corolla-2020.jpg",
+            "image": "/images/fleet/toyota-corolla-2020.jpg",
             "isFeatured": false,
             "dailyRateMax": 80000
         },
@@ -272,7 +272,7 @@
             "rateNote": "Final rate depends on the terms agreed.",
             "seats": "4 seats",
             "description": "The same car at a lower rate. A sensible pick for longer hires where budget matters more than the model year.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/toyota-corolla-2016.jpg",
+            "image": "/images/fleet/toyota-corolla-2016.jpg",
             "isFeatured": false,
             "dailyRateMax": 80000
         },
@@ -288,7 +288,7 @@
             "rateNote": "Final rate depends on the terms agreed.",
             "seats": "4 seats",
             "description": "Compact and economical, best suited to city errands and short airport transfers where a full-size sedan is more car than the job needs.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/kia-rio.jpg",
+            "image": "/images/fleet/kia-rio.jpg",
             "isFeatured": false,
             "dailyRateMax": 80000
         },
@@ -304,7 +304,7 @@
             "rateNote": "Final rate depends on the terms agreed.",
             "seats": "4 seats",
             "description": "A step up in comfort from the compact sedans, without moving into SUV rates. Comfortable for corporate guests on city routes.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/kia-optima.jpg",
+            "image": "/images/fleet/kia-optima.jpg",
             "isFeatured": false,
             "dailyRateMax": 80000
         },
@@ -320,7 +320,7 @@
             "rateNote": null,
             "seats": "7 seats",
             "description": "Family and small-group transport with proper luggage space behind the third row. Sliding doors make it easy in tight compounds and car parks.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/bus-hiace.jpg",
+            "image": "/images/bus-hiace.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -336,7 +336,7 @@
             "rateNote": null,
             "seats": "7 seats",
             "description": "The budget seven-seater. Well maintained, air conditioning throughout, and the cheapest way to move a family with luggage.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/bus-hiace.jpg",
+            "image": "/images/bus-hiace.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -352,7 +352,7 @@
             "rateNote": null,
             "seats": "14 seats",
             "description": "The workhorse for staff runs, church trips and airport groups. Fourteen seats, air conditioned, with room for bags on a longer journey.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/toyota-hiace-bus.jpg",
+            "image": "/images/fleet/toyota-hiace-bus.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -368,7 +368,7 @@
             "rateNote": null,
             "seats": "30 seats",
             "description": "Thirty seats for conferences, corporate away days and large church or school movements. Comes with a driver used to managing a full bus.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/interstate-minibus.jpg",
+            "image": "/images/interstate-minibus.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -384,7 +384,7 @@
             "rateNote": null,
             "seats": "18 seats",
             "description": "High-roof executive shuttle. Stand-up cabin, individual seats and a far quieter ride than a standard bus — used for VIP delegations and hotel transfers.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/interstate-minibus.jpg",
+            "image": "/images/interstate-minibus.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -400,7 +400,7 @@
             "rateNote": null,
             "seats": "6 seats",
             "description": "Top of the standard fleet. Full-size luxury SUV for principals, visiting executives and weddings where the lead car matters.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/lexus-lx-570.jpg",
+            "image": "/images/fleet/lexus-lx-570.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -416,7 +416,7 @@
             "rateNote": "Request a quote",
             "seats": "4 seats",
             "description": "Statement vehicle for weddings, photo shoots and events. Limited availability, so book early. Priced per engagement rather than per day.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/suv-g-class.jpg",
+            "image": "/images/suv-g-class.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -432,7 +432,7 @@
             "rateNote": "Request a quote",
             "seats": "4 seats",
             "description": "B6-rated armoured vehicle with a security-trained driver. Supplied with documentation and, where required, an escort team. Quoted per assignment after a short brief.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/suv-g-class.jpg",
+            "image": "/images/suv-g-class.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -448,7 +448,7 @@
             "rateNote": "Request a quote",
             "seats": null,
             "description": "Point-to-point road travel between states with a rested, route-familiar driver. Quoted by route, not by day.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/interstate-minibus.jpg",
+            "image": "/images/interstate-minibus.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -464,7 +464,7 @@
             "rateNote": "Outside Akure, negotiated per assignment.",
             "seats": null,
             "description": "Trained escort teams and lead vehicles for sensitive movements, cash-in-transit support and VIP protection.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/fleet/security-escort.jpg",
+            "image": "/images/fleet/security-escort.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         },
@@ -480,7 +480,7 @@
             "rateNote": "Request a quote",
             "seats": null,
             "description": "Drive it yourself. Valid licence, a verification check and a refundable deposit; insurance and papers are handled by us.",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/interior-console.jpg",
+            "image": "/images/interior-console.jpg",
             "isFeatured": false,
             "dailyRateMax": null
         }
@@ -502,7 +502,7 @@
             ],
             "officeAddress": null,
             "airportBranch": null,
-            "heroImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/night-drive.jpg",
+            "heroImage": "/images/night-drive.jpg",
             "metaTitle": "Car Hire in Akure | Day Rates and Lagos Trips",
             "metaDescription": "Vehicle hire in Akure, Ondo State. Day rates in town, and fixed trip rates to Lagos for SUVs, buses and saloon cars. Armed escorts available."
         },
@@ -522,7 +522,7 @@
             ],
             "officeAddress": "Victoria Island, Lagos",
             "airportBranch": "Murtala Muhammed International Airport",
-            "heroImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/chauffeur-service.jpg",
+            "heroImage": "/images/chauffeur-service.jpg",
             "metaTitle": "Car Hire in Lagos | Chauffeur, Self Drive & Bus Rental",
             "metaDescription": "Rent a car with a driver in Lagos. SUVs, saloons and buses, with insurance and fuel inside the city included. Quoted on WhatsApp in minutes."
         },
@@ -543,7 +543,7 @@
             ],
             "officeAddress": "Wuse II, Abuja",
             "airportBranch": "Nnamdi Azikiwe International Airport",
-            "heroImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/suv-white-luxury.jpg",
+            "heroImage": "/images/suv-white-luxury.jpg",
             "metaTitle": "Car Hire in Abuja | Chauffeur, Self Drive & Bus Rental",
             "metaDescription": "Rent a car with a driver in Abuja. SUVs, saloons and buses, with insurance and fuel inside the city included. Quoted on WhatsApp in minutes."
         },
@@ -564,7 +564,7 @@
             ],
             "officeAddress": "GRA Phase 2, Port Harcourt",
             "airportBranch": "Port Harcourt International Airport",
-            "heroImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/night-drive.jpg",
+            "heroImage": "/images/night-drive.jpg",
             "metaTitle": "Car Hire in Port Harcourt | Chauffeur, Self Drive & Bus Rental",
             "metaDescription": "Rent a car with a driver in Port Harcourt. SUVs, saloons and buses, with insurance and fuel inside the city included. Quoted on WhatsApp in minutes."
         },
@@ -584,7 +584,7 @@
             ],
             "officeAddress": "Bodija, Ibadan",
             "airportBranch": "Ibadan Airport",
-            "heroImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/sedan-blue.jpg",
+            "heroImage": "/images/sedan-blue.jpg",
             "metaTitle": "Car Hire in Ibadan | Chauffeur, Self Drive & Bus Rental",
             "metaDescription": "Rent a car with a driver in Ibadan. SUVs, saloons and buses, with insurance and fuel inside the city included. Quoted on WhatsApp in minutes."
         }
@@ -831,7 +831,7 @@
             "headlineTemplate": "{service} in {location}, {city}",
             "summary": "Flight-tracked pickups and drop-offs with waiting time included, at both Lagos and Abuja terminals.",
             "body": "<p>We track the flight, not the booking time. If you land ninety minutes late the driver is still there, and you are not charged for the delay.</p> <h3>How the pickup works</h3> <ul><li>Send the flight number when you book — that is what we monitor</li><li>The driver waits inside arrivals with a name board</li><li>Sixty minutes of waiting time is included after landing on domestic flights, ninety on international</li><li>One agreed price, including parking and tolls</li></ul> <h3>Coverage</h3> <p>We hold vehicles at Murtala Muhammed in Lagos and Nnamdi Azikiwe in Abuja, both terminals, at any hour. Port Harcourt and Ibadan airports are covered on advance booking.</p> <h3>Departures</h3> <p>For outbound flights we work backwards from your check-in time and the traffic on the day, and we will tell you honestly if the pickup time you have asked for is too late.</p>",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/chauffeur-service.jpg",
+            "image": "/images/chauffeur-service.jpg",
             "showInDirectory": true,
             "hasLandingPage": true
         },
@@ -842,7 +842,7 @@
             "headlineTemplate": "{service} in {location}, {city}",
             "summary": "Decorated vehicles, uniformed chauffeurs and convoy arrangements built around the day's timetable.",
             "body": "<p>Wedding transport is a timetable problem wearing a nice suit. The cars matter, but what actually saves the day is a driver who knows he is collecting the couple from the church at 2pm and where he is parking until then.</p> <h3>What we arrange</h3> <ul><li>A lead car for the couple, decorated to your colours</li><li>Convoy vehicles for family and the bridal party</li><li>Uniformed chauffeurs briefed on the full run of the day</li><li>Buses for guest movement between the ceremony and reception</li></ul> <h3>Booking window</h3> <p>Book six to eight weeks out for a Saturday in December or January — those dates go first and they go early. For the statement vehicles, longer.</p> <h3>On the day</h3> <p>We ask for one contact who is not the couple. Somebody has to be reachable at 9am, and it should not be the bride.</p>",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/suv-g-class.jpg",
+            "image": "/images/suv-g-class.jpg",
             "showInDirectory": true,
             "hasLandingPage": true
         },
@@ -853,7 +853,7 @@
             "headlineTemplate": "{service} in {location}, {city}",
             "summary": "Monthly and quarterly contracts with a dedicated driver, one invoice and a named account manager.",
             "body": "<p>Running your own pool cars means running a small fleet business on the side: maintenance, licensing, driver cover when someone is sick. A monthly contract puts that on us.</p> <h3>How contracts work</h3> <ul><li>A dedicated vehicle and a dedicated driver, not whoever is free</li><li>Maintenance, servicing, insurance and papers handled by us</li><li>A replacement vehicle if yours goes in for work</li><li>One invoice a month and a named person to call</li></ul> <h3>Terms</h3> <p>Monthly is the shortest contract we do. Quarterly and annual terms are meaningfully cheaper per day, and for annual we will hold a specific vehicle for your account.</p> <h3>Drivers</h3> <p>Contract drivers are vetted, and you meet the driver before the contract starts. If the fit is wrong in the first fortnight we change them without argument.</p>",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/sedan-blue.jpg",
+            "image": "/images/sedan-blue.jpg",
             "showInDirectory": true,
             "hasLandingPage": true
         },
@@ -864,7 +864,7 @@
             "headlineTemplate": "{service} in {location}, {city}",
             "summary": "Premium sedans and SUVs for visiting executives, photo shoots and events where the car is part of the impression.",
             "body": "<p>Sometimes the vehicle is doing a job beyond transport — collecting an investor, carrying a principal into a venue, sitting in a shot. Those bookings are priced per engagement rather than per day.</p> <h3>Availability</h3> <p>The premium fleet is small and moves quickly. Tell us the date, the duration and roughly what the vehicle is for, and we will tell you honestly what is free.</p>",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/premium-front.jpg",
+            "image": "/images/premium-front.jpg",
             "showInDirectory": true,
             "hasLandingPage": true
         },
@@ -875,7 +875,7 @@
             "headlineTemplate": "{service} in {location}, {city}",
             "summary": "Trained escort teams and lead vehicles for sensitive movements, arranged in advance after a short brief.",
             "body": "<p>Escort work is arranged, never improvised. We take a brief on the route, the timing and the risk profile, then propose a team and a vehicle configuration to match.</p> <h3>What a brief covers</h3> <ul><li>Route, timing and any fixed appointments along the way</li><li>Number of principals and vehicles in the movement</li><li>Whether the client requires armed or unarmed personnel</li><li>Coordination with any existing security detail</li></ul> <p>All escort personnel work within Nigerian law and with the appropriate authorisations. We will decline work we cannot staff properly.</p>",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/night-drive.jpg",
+            "image": "/images/night-drive.jpg",
             "showInDirectory": true,
             "hasLandingPage": true
         },
@@ -886,7 +886,7 @@
             "headlineTemplate": "{service} in {location}, {city}",
             "summary": "B6 and B7 rated vehicles with security-trained drivers, supplied with documentation.",
             "body": "<p>Armoured vehicles are quoted per assignment. Availability is limited and paperwork takes time, so bring us the requirement early rather than the day before.</p> <h3>What we need to quote</h3> <ul><li>Protection level required (B6 is standard; B7 on request)</li><li>Duration and route</li><li>Whether an escort team is needed alongside the vehicle</li></ul> <p>Every armoured vehicle is supplied with its documentation and a driver trained for the vehicle's weight and handling, which is considerably different from a standard SUV.</p>",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/suv-g-class.jpg",
+            "image": "/images/suv-g-class.jpg",
             "showInDirectory": true,
             "hasLandingPage": true
         },
@@ -897,7 +897,7 @@
             "headlineTemplate": "{service} in {location}, {city}",
             "summary": "Drive it yourself, with insurance, documentation and roadside cover handled by us.",
             "body": "<p>Self drive is the cheapest way to hire, because you are not paying for a driver's day. It comes with more paperwork, for obvious reasons.</p> <h3>What you need</h3> <ul><li>A valid Nigerian driver's licence held for at least two years</li><li>Government-issued ID and proof of address</li><li>A refundable deposit, returned after the vehicle is checked back in</li><li>A short verification call — usually same day</li></ul> <h3>What is included</h3> <p>Comprehensive insurance, all vehicle papers, and roadside assistance for the duration of the hire. Fuel is on you. The vehicle goes out full and should come back full.</p>",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/interior-console.jpg",
+            "image": "/images/interior-console.jpg",
             "showInDirectory": true,
             "hasLandingPage": true
         },
@@ -908,7 +908,7 @@
             "headlineTemplate": "{service} in {location}, {city}",
             "summary": "Long-distance road travel with rested, route-familiar drivers, priced by route rather than by day.",
             "body": "<p>Interstate is priced by route, because a Lagos–Benin run and a Lagos–Kano run are not the same job even if both take a day on paper.</p> <h3>How we run long distance</h3> <ul><li>Drivers who have run the specific route before</li><li>Departure timed so the difficult stretches are covered in daylight</li><li>A second driver on routes beyond a single safe driving day</li><li>Fuel and tolls built into the quoted price</li></ul> <h3>Common routes</h3> <p>Lagos–Abuja, Lagos–Ibadan, Lagos–Benin, Abuja–Kaduna and Abuja–Jos are routine for us. Anywhere else, give us the destination and we will price it.</p>",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/interstate-minibus.jpg",
+            "image": "/images/interstate-minibus.jpg",
             "showInDirectory": true,
             "hasLandingPage": true
         },
@@ -919,7 +919,7 @@
             "headlineTemplate": "{service} in {location}, {city}",
             "summary": "Group movement for staff runs, church trips, school outings and conferences.",
             "body": "<p>Thirty seats, air conditioned, with a driver used to managing a full bus and the questions that come with one.</p> <h3>Typical bookings</h3> <ul><li>Daily staff shuttles on a fixed route and timetable</li><li>Church and school trips, including interstate</li><li>Conference and delegate movement between hotel and venue</li><li>Wedding guest transport</li></ul> <h3>Pricing</h3> <p>Within the city we price per day. Interstate we price by route. Recurring staff runs are cheapest on a monthly contract.</p>",
-            "image": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/interstate-minibus.jpg",
+            "image": "/images/interstate-minibus.jpg",
             "showInDirectory": true,
             "hasLandingPage": true
         }
@@ -931,7 +931,7 @@
             "category": "Pricing",
             "excerpt": "A plain breakdown of daily, airport and monthly rates by vehicle class, plus the four extras that catch people out.",
             "body": "<p>Most quotes you get for car hire in Lagos are not comparable, because different companies include different things. One price includes the driver and fuel, another does not, a third adds a \"logistics fee\" on the day. Here is how our pricing works and what to check when you are comparing.</p> <h2>Daily rates by vehicle class</h2> <p>A day means ten hours of vehicle and driver time within one city. Saloons such as a Camry run from NGN100,000. Mid-size SUVs — the Prado, the GX 460 — sit between NGN170,000 and NGN200,000. Full-size and luxury vehicles such as the Land Cruiser and LX 570 run from NGN400,000. Buses depend on capacity: a fourteen-seat Hiace is NGN200,000, a thirty-seat Coaster NGN300,000.</p> <h2>Airport transfers are not day rates</h2> <p>A single airport pickup or drop-off is priced separately and is substantially cheaper than a full day — roughly NGN60,000 to NGN70,000 for a saloon and NGN100,000 to NGN120,000 for an SUV. If all you need is a collection from Murtala Muhammed, do not let anyone sell you a full day.</p> <h2>The four things that change the price</h2> <ul> <li><strong>Overtime.</strong> Past ten hours, an hourly rate applies. Ask what it is before you book.</li> <li><strong>Leaving the city.</strong> The moment you cross into another state, city rates stop applying and route pricing starts.</li> <li><strong>Fuel outside the agreed area.</strong> City fuel is included. A run to Ibadan is not city fuel.</li> <li><strong>Waiting on standby.</strong> A vehicle held at your disposal all day costs the same whether it moves or not.</li> </ul> <h2>Where monthly hire beats daily</h2> <p>The arithmetic is simple. If you need a vehicle more than about eight days a month, a monthly contract costs less than paying by the day, and you get a dedicated driver, maintenance cover and a replacement vehicle when yours is being serviced.</p> <h2>What to ask before you pay a deposit</h2> <p>Ask four questions: is the driver included, is fuel included and within what area, what is the overtime rate, and what happens if the vehicle breaks down. Any company that cannot answer those in one message is going to be difficult on the day.</p>",
-            "coverImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/sedan-blue.jpg",
+            "coverImage": "/images/sedan-blue.jpg",
             "readMinutes": 8,
             "author": "Editorial desk",
             "publishedAt": "2026-08-14T05:54:39+00:00",
@@ -943,7 +943,7 @@
             "category": "Fleet",
             "excerpt": "Clearance, comfort and running cost compared for teams working outside the city.",
             "body": "<p>Field teams ask for a Prado and then discover that half their equipment will not fit. Here is how the two actually compare for site work.</p> <h2>Clearance and surface</h2> <p>Both handle bad roads. The Hilux handles worse ones, and it handles them loaded. If your route includes unsurfaced access roads in the rainy season, the pickup is the safer booking.</p> <h2>Carrying equipment</h2> <p>This is usually the deciding factor. The Hilux has an open load bed: generators, cable drums, survey equipment, anything you would rather not put in a cabin. The Prado gives you a sealed boot and seven seats, which is what you want when the cargo is people.</p> <h2>Comfort over distance</h2> <p>On a three-hour highway run, the Prado is a materially better place to sit, and a team that arrives rested works better. For site visits within an hour of base, that matters less than the load bed.</p> <h2>Cost</h2> <p>The Hilux runs about NGN20,000 a day cheaper and uses less fuel. Over a month-long project that is a real number.</p> <h2>The short answer</h2> <p>Carrying equipment or reaching difficult sites: Hilux. Carrying people any distance: Prado. Doing both regularly: book one of each and stop compromising.</p>",
-            "coverImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/suv-black.jpg",
+            "coverImage": "/images/suv-black.jpg",
             "readMinutes": 6,
             "author": "Editorial desk",
             "publishedAt": "2026-08-03T05:54:39+00:00",
@@ -955,7 +955,7 @@
             "category": "Events",
             "excerpt": "Convoy sizing, timing buffers and the details that keep a wedding day moving.",
             "body": "<p>Wedding transport fails in predictable ways. Almost all of them are timetable failures rather than vehicle failures.</p> <h2>Size the convoy honestly</h2> <p>Count the people who must be moved, not the people you would like to move. A lead car for the couple, one vehicle for immediate family on each side, and a bus for the bridal party covers most weddings. Guests generally arrange themselves, and planning as though they will not is how budgets get destroyed.</p> <h2>Build in the buffer everyone skips</h2> <p>The gap between the ceremony ending and the reception starting is where days collapse. Photographs always overrun. Add forty-five minutes to whatever your planner has written down, and tell the drivers the padded time, not the optimistic one.</p> <h2>Nominate a contact who is not the couple</h2> <p>Someone has to be reachable from 8am. It cannot be the bride and it should not be the groom. Give the transport company one name and one number, and make sure that person has the full running order.</p> <h2>Brief the drivers on the whole day</h2> <p>A driver who knows he collects the couple at 2pm and where he waits until then will be in position. A driver who only knows the pickup address will be somewhere else when you need him.</p> <h2>Book earlier than feels necessary</h2> <p>December and January Saturdays go first, and they go months out. If you want a specific vehicle for the lead car, six to eight weeks is the minimum.</p>",
-            "coverImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/suv-g-class.jpg",
+            "coverImage": "/images/suv-g-class.jpg",
             "readMinutes": 7,
             "author": "Editorial desk",
             "publishedAt": "2026-07-23T05:54:39+00:00",
@@ -967,7 +967,7 @@
             "category": "Logistics",
             "excerpt": "Sequencing, packing and access arrangements for a relocation with no Monday downtime.",
             "body": "<p>An office move has one real deadline: people sitting down and working on Monday morning. Everything else is sequencing.</p> <h2>Two weeks out</h2> <ul><li>Confirm lift booking and loading access at both buildings, in writing</li><li>Check whether either building restricts weekend access hours</li><li>Decide who handles IT equipment — your team or ours</li><li>Label every desk and cabinet with its destination room</li></ul> <h2>The week before</h2> <ul><li>Pack everything that is not needed to trade in the final week</li><li>Photograph the back of every server and switch before anything is unplugged</li><li>Confirm parking for the truck at both ends — this is the single most common failure</li></ul> <h2>Moving day sequence</h2> <p>Load in reverse order of need. The things that must be working first — network equipment, the reception desk, the MD's office — go on last and come off first. Everything else follows.</p> <h2>Sunday</h2> <p>Reserve Sunday for IT and testing, not for moving furniture. If furniture is still moving on Sunday afternoon, Monday will not work.</p> <h2>What to tell your transport company</h2> <p>Number of rooms, floor at both ends, working lift or not, and whether there is a time window for access. Those four facts determine the crew size and the quote more than the distance does.</p>",
-            "coverImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/moving-van.jpg",
+            "coverImage": "/images/moving-van.jpg",
             "readMinutes": 7,
             "author": "Editorial desk",
             "publishedAt": "2026-07-12T05:54:39+00:00",
@@ -979,7 +979,7 @@
             "category": "Compliance",
             "excerpt": "Which documents you need, what they cost, and which ones are worth handling early.",
             "body": "<p>Every vehicle on Nigerian roads needs the same core set of papers. Missing one turns a routine stop into a long afternoon.</p> <h2>The documents that matter</h2> <ul> <li><strong>Vehicle licence</strong> — renewed annually, the one most often allowed to lapse</li> <li><strong>Insurance certificate</strong> — third-party is the legal minimum; comprehensive is what any hire vehicle should carry</li> <li><strong>Roadworthiness certificate</strong> — annual, requires an inspection</li> <li><strong>Proof of ownership</strong> — issued once, keep the original somewhere safe and a copy in the vehicle</li> <li><strong>Hackney permit</strong> — required if the vehicle carries passengers commercially, which includes hire vehicles</li> </ul> <h2>Renew before expiry, not after</h2> <p>Renewals are straightforward while the document is still valid and become tedious once it has lapsed. Set a calendar reminder six weeks before each expiry date.</p> <h2>If you are hiring rather than owning</h2> <p>This is our problem, not yours. Every vehicle we hire out goes with its full document set, and if you are stopped, the papers are in the car. Ask to see them before you drive away on a self-drive booking — a company that hesitates is telling you something.</p>",
-            "coverImage": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/interior-console.jpg",
+            "coverImage": "/images/interior-console.jpg",
             "readMinutes": 6,
             "author": "Editorial desk",
             "publishedAt": "2026-07-01T05:54:39+00:00",
@@ -1098,51 +1098,51 @@
     },
     "gallery": [
         {
-            "src": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/gallery/fleet-lineup.jpg",
+            "src": "/images/gallery/fleet-lineup.jpg",
             "caption": "Part of the fleet at the yard in Akure"
         },
         {
-            "src": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/gallery/prado-pair.jpg",
+            "src": "/images/gallery/prado-pair.jpg",
             "caption": "Land Cruiser Prados ready for dispatch"
         },
         {
-            "src": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/gallery/prado-side.jpg",
+            "src": "/images/gallery/prado-side.jpg",
             "caption": "Prado, cleaned and checked before a run"
         },
         {
-            "src": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/gallery/lexus-gx-front.jpg",
+            "src": "/images/gallery/lexus-gx-front.jpg",
             "caption": "Lexus GX 460"
         },
         {
-            "src": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/gallery/minibus.jpg",
+            "src": "/images/gallery/minibus.jpg",
             "caption": "Minibus for group and interstate travel"
         },
         {
-            "src": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/gallery/corolla-rear.jpg",
+            "src": "/images/gallery/corolla-rear.jpg",
             "caption": "Corolla — the everyday saloon"
         },
         {
-            "src": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/gallery/jetour.jpg",
+            "src": "/images/gallery/jetour.jpg",
             "caption": "Jetour SUV"
         },
         {
-            "src": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/images/gallery/granvia.jpg",
+            "src": "/images/gallery/granvia.jpg",
             "caption": "Toyota Granvia"
         }
     ],
     "videos": [
         {
-            "src": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/video/fleet-drive.mp4",
+            "src": "/video/fleet-drive.mp4",
             "orientation": "landscape",
             "caption": "On the road"
         },
         {
-            "src": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/video/fleet-walkaround.mp4",
+            "src": "/video/fleet-walkaround.mp4",
             "orientation": "portrait",
             "caption": "Walkaround"
         },
         {
-            "src": "https://iqlztsyygligucjdribp.supabase.co/storage/v1/object/public/media/video/fleet-tour.mp4",
+            "src": "/video/fleet-tour.mp4",
             "orientation": "portrait",
             "caption": "Fleet tour"
         }

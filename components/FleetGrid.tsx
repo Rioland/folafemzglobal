@@ -17,7 +17,7 @@ export function VehicleCard({ vehicle, source }: { vehicle: Vehicle; source?: st
         )}
         {vehicle.seats && (
           <span className="plate card__tag">
-            <span className="plate__tab">SEATS</span>
+            <span className="plate__tab">Seats</span>
             <span className="plate__value">{vehicle.seats}</span>
           </span>
         )}
@@ -30,12 +30,12 @@ export function VehicleCard({ vehicle, source }: { vehicle: Vehicle; source?: st
 
         <div className="card__rates">
           <span className="plate">
-            <span className="plate__tab">{vehicle.dailyRate ? 'DAY' : 'RATE'}</span>
+            <span className="plate__tab">{vehicle.dailyRate ? 'per day' : 'rate'}</span>
             <span className="plate__value">{priceLabel(vehicle)}</span>
           </span>
           {secondary && (
             <span className="plate plate--muted">
-              <span className="plate__tab">{(vehicle.secondaryLabel || 'Airport').toUpperCase()}</span>
+              <span className="plate__tab">{(vehicle.secondaryLabel || 'Airport').toLowerCase()}</span>
               <span className="plate__value">{secondary}</span>
             </span>
           )}

@@ -129,7 +129,7 @@ export default function HomePage() {
               <Link className="serviceCard" key={s.slug} href={`/services/${s.slug}/`}>
                 <h3>{s.name}</h3>
                 <p>{s.summary}</p>
-                <span className="serviceCard__go">{s.linkLabel || 'Learn more'} →</span>
+                <span className="serviceCard__go">{s.linkLabel || 'Learn more'}</span>
               </Link>
             ))}
           </div>
