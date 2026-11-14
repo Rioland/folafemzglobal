@@ -13,9 +13,98 @@
    The API's send body accepts: to, cc, bcc, subject, text, html, displayName,
    attachments, inReplyTo, forwardOf. There is deliberately no replyTo — see
    `REPLY_TO_NOTE` below for how that is worked around.
+
+   Where the enquiry goes, and the SMTP account, come from the `mail_settings`
+   row that staff edit in the admin dashboard. The Netlify environment
+   variables (EMAIL_TO, EMAIL_USER, EMAIL_PASSWORD, SMTP_HOST, SMTP_PORT) are
+   the fallback while that row is empty, so nothing changes until someone
+   fills it in. The row is read with the service-role key because it holds a
+   password and is closed to the anonymous key.
    -------------------------------------------------------------------------- */
 
+import { createClient } from '@supabase/supabase-js';
+
 const API_BASE = 'https://api.mail.hostinger.com';
+
+export type SmtpAccount = { host: string; port: number; user: string; pass: string };
+
+export type MailConfig = {
+  /** Inbox the enquiry lands in. Empty when nothing is configured anywhere. */
+  to: string;
+  smtp: SmtpAccount | null;
+  fromName: string;
+  apiToken?: string;
+};
+
+type MailSettingsRow = {
+  to_address: string;
+  smtp_host: string;
+  smtp_port: number;
+  smtp_user: string;
+  smtp_password: string;
+  from_name: string;
+};
+
+async function readMailSettings(): Promise<MailSettingsRow | null> {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !key) return null;
+
+  try {
+    const db = createClient(url, key, { auth: { persistSession: false } });
+    const { data, error } = await db
+      .from('mail_settings')
+      .select('to_address, smtp_host, smtp_port, smtp_user, smtp_password, from_name')
+      .eq('id', 1)
+      .maybeSingle<MailSettingsRow>();
+
+    if (error) {
+      console.error('[mail] could not read mail_settings:', error.message);
+      return null;
+    }
+    return data;
+  } catch (err) {
+    console.error('[mail] could not read mail_settings:', err);
+    return null;
+  }
+}
+
+/**
+ * Resolve the mail configuration for this send. The dashboard's row wins
+ * field by field for the recipient; the SMTP account is taken whole from
+ * whichever source has all three of host, user and password, dashboard first,
+ * so a half-filled form never pairs one source's user with the other's password.
+ */
+export async function getMailConfig(): Promise<MailConfig> {
+  const row = await readMailSettings();
+  const env = process.env;
+
+  const to = row?.to_address?.trim() || env.EMAIL_TO || env.EMAIL_USER || '';
+
+  let smtp: SmtpAccount | null = null;
+  if (row?.smtp_host?.trim() && row.smtp_user?.trim() && row.smtp_password) {
+    smtp = {
+      host: row.smtp_host.trim(),
+      port: Number(row.smtp_port) || 465,
+      user: row.smtp_user.trim(),
+      pass: row.smtp_password,
+    };
+  } else if (env.EMAIL_USER && env.EMAIL_PASSWORD) {
+    smtp = {
+      host: env.SMTP_HOST || 'smtp.hostinger.com',
+      port: Number(env.SMTP_PORT ?? 465),
+      user: env.EMAIL_USER,
+      pass: env.EMAIL_PASSWORD,
+    };
+  }
+
+  return {
+    to,
+    smtp,
+    fromName: row?.from_name?.trim() || 'Website enquiry',
+    apiToken: env.HOSTINGER_API_KEY || undefined,
+  };
+}
 
 export type Mail = {
   to: string;
@@ -116,26 +205,21 @@ async function sendViaApi(mail: Mail, token: string): Promise<'api'> {
 /* SMTP fallback                                                               */
 /* -------------------------------------------------------------------------- */
 
-async function sendViaSmtp(mail: Mail): Promise<'smtp'> {
-  const { EMAIL_USER, EMAIL_PASSWORD, SMTP_HOST, SMTP_PORT } = process.env;
-
-  if (!EMAIL_USER || !EMAIL_PASSWORD) {
-    throw new MailError('No mail transport is configured.');
-  }
+async function sendViaSmtp(mail: Mail, account: SmtpAccount | null): Promise<'smtp'> {
+  if (!account) throw new MailError('No mail transport is configured.');
 
   // Imported lazily so the dependency is only loaded on the fallback path.
   const nodemailer = (await import('nodemailer')).default;
-  const port = Number(SMTP_PORT ?? 465);
 
   const transport = nodemailer.createTransport({
-    host: SMTP_HOST ?? 'smtp.hostinger.com',
-    port,
-    secure: port === 465,
-    auth: { user: EMAIL_USER, pass: EMAIL_PASSWORD },
+    host: account.host,
+    port: account.port,
+    secure: account.port === 465,
+    auth: { user: account.user, pass: account.pass },
   });
 
   await transport.sendMail({
-    from: `"${mail.displayName ?? 'Website enquiry'}" <${EMAIL_USER}>`,
+    from: `"${mail.displayName ?? 'Website enquiry'}" <${account.user}>`,
     to: mail.to,
     replyTo: mail.replyTo,
     subject: mail.subject,
@@ -152,16 +236,11 @@ async function sendViaSmtp(mail: Mail): Promise<'smtp'> {
  * Send, preferring the API. Returns which transport carried the message so the
  * caller can log it.
  */
-export async function sendMail(mail: Mail): Promise<'api' | 'smtp'> {
-  const token = process.env.HOSTINGER_API_KEY;
+export async function sendMail(mail: Mail, config: MailConfig): Promise<'api' | 'smtp'> {
+  const withName = { ...mail, displayName: mail.displayName ?? config.fromName };
 
-  if (token) return sendViaApi(mail, token);
-  return sendViaSmtp(mail);
-}
-
-/** Where the enquiry should land. */
-export function inboxAddress(): string | undefined {
-  return process.env.EMAIL_TO || process.env.EMAIL_USER;
+  if (config.apiToken) return sendViaApi(withName, config.apiToken);
+  return sendViaSmtp(withName, config.smtp);
 }
 
 /**
