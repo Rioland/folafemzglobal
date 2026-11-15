@@ -1,12 +1,14 @@
 import { NextResponse } from 'next/server';
 import { composeMessage, type Enquiry } from '@/lib/enquiry';
-import { MailError, inboxAddress, sendMail } from '@/lib/mailer';
+import { MailError, getMailConfig, sendMail } from '@/lib/mailer';
 
 /* --------------------------------------------------------------------------
    Enquiry endpoint
    --------------------------------------------------------------------------
    Receives a booking enquiry and emails it to the business inbox via the
    Hostinger Mail API, falling back to SMTP when no API token is configured.
+   The inbox and the SMTP account come from the admin dashboard's mail
+   settings, with the Netlify environment as the fallback.
    Node runtime: the SMTP fallback opens a TCP connection, which Edge cannot.
    -------------------------------------------------------------------------- */
 
@@ -58,9 +60,10 @@ export async function POST(request: Request) {
     );
   }
 
-  const to = inboxAddress();
+  const config = await getMailConfig();
+  const to = config.to;
 
-  if (!to || (!process.env.HOSTINGER_API_KEY && !process.env.EMAIL_PASSWORD)) {
+  if (!to || (!config.apiToken && !config.smtp)) {
     // Configuration fault, not the visitor's. Say so plainly and log it, rather
     // than reporting a success the business will never see.
     console.error('[enquiry] no mail transport configured');
@@ -110,7 +113,7 @@ export async function POST(request: Request) {
       text: contactLine ? `${contactLine}\n\n${text}` : text,
       html,
       replyTo: enquiry.email ? oneLine(enquiry.email) : undefined,
-    });
+    }, config);
     console.log(`[enquiry] sent via ${transport}`);
   } catch (error) {
     if (error instanceof MailError) {
